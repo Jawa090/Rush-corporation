@@ -13,13 +13,17 @@ const Icon = ({ title, children }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-[#08112a] text-white/80 text-sm">
-      <div className="max-w-7xl mx-auto px-6 py-8">
+    <footer className="relative text-white/80 text-sm overflow-hidden" style={{background: 'linear-gradient(180deg,#0a132e 0%,#0e1a3f 100%)'}}>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-12 -left-12 w-72 h-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+        <div className="absolute -bottom-16 -right-16 w-80 h-80 rounded-full bg-purple-600/10 blur-3xl"></div>
+      </div>
+      <div className="relative max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           {/* Left brand + nav */}
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-3">
-              <img src="/logo1.png" alt="Rush Group" className="h-6 w-auto" />
+              <img src="/logo1.png" alt="Rush Group" className="h-7 w-auto drop-shadow" />
             </div>
             <nav className="flex items-center gap-6">
               <a href="#" className="hover:text-white transition-colors">Careers</a>
@@ -65,7 +69,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-white/60">© Rush Group International Limited 2025. All rights reserved.</p>
+          <p className="text-white/60">© {new Date().getFullYear()} Rush Group International Limited. All rights reserved.</p>
+          <div className="text-white/60">Made with ❤️ by Rush</div>
         </div>
       </div>
     </footer>

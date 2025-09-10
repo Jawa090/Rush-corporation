@@ -33,13 +33,16 @@ const AboutPage = () => {
       <section className="max-w-7xl mx-auto px-6 pt-6">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <div>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight" style={{fontFamily: 'Georgia, serif'}}>About Rush</h1>
-            <p className="mt-3 text-white/85 leading-normal text-lg" style={{fontFamily: 'Georgia, serif'}}>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight font-sans">
+              <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">About Rush</span>
+            </h1>
+            <div className="mt-3 h-1.5 w-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+            <p className="mt-4 text-white/90 leading-relaxed text-lg font-sans max-w-2xl">
               Rush is a technology corporation focused on building platforms and products that
               bring people closer to the magic of innovation. We combine design, engineering,
               and data to craft reliable, joyful experiences at global scale.
             </p>
-            <p className="mt-2 text-white/70 leading-normal" style={{fontFamily: 'Georgia, serif'}}>
+            <p className="mt-3 text-white/80 leading-relaxed text-lg font-sans max-w-2xl">
               Our mission is simple: make powerful technology feel effortless. We support a
               growing family of brands with shared infrastructure, design systems, and culture—
               so teams can move faster and deliver consistent quality to millions of users.
@@ -55,20 +58,53 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* About - More Content */}
+      <section className="max-w-7xl mx-auto px-6 mt-8">
+        <div className="grid md:grid-cols-2 gap-6 items-start">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">What we do</h2>
+            <p className="text-white/80 leading-relaxed mb-3">
+              We partner with ambitious teams to design, build, and scale modern software products. From
+              cloud-native backends and real‑time collaboration to beautiful, responsive interfaces—our work
+              blends engineering precision with product craft.
+            </p>
+            <p className="text-white/80 leading-relaxed mb-3">
+              Our platform approach lets brands share infrastructure, security, and design systems. That means
+              faster delivery, consistent quality, and the freedom for each brand to focus on what makes it
+              special.
+            </p>
+            <p className="text-white/80 leading-relaxed">
+              Reliability, performance, and accessibility are non‑negotiable. We observe, measure, and iterate—
+              shipping small, learning fast, and scaling what works to millions of users.
+            </p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <h3 className="text-white font-semibold text-lg mb-4">Our focus areas</h3>
+            <ul className="space-y-2 text-white/80 leading-relaxed list-disc list-inside">
+              <li>Product strategy, UX research, and interface design</li>
+              <li>Cloud, DevOps, and secure, scalable architectures</li>
+              <li>AI‑assisted workflows and data‑driven experiences</li>
+              <li>Quality engineering, observability, and SRE practices</li>
+              <li>Shared design systems and cross‑brand components</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="max-w-7xl mx-auto px-6 mt-8">
         <div className="grid md:grid-cols-3 gap-4">
-          <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-            <h3 className="text-white font-semibold text-lg" style={{fontFamily: 'Georgia, serif'}}>Craft and clarity</h3>
-            <p className="text-white/70 mt-1 leading-normal" style={{fontFamily: 'Georgia, serif'}}>We sweat the details and reduce complexity so products feel natural and intuitive.</p>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-white font-semibold text-xl font-sans">Craft and clarity</h3>
+            <p className="text-white/70 mt-2 leading-relaxed font-sans">We sweat the details and reduce complexity so products feel natural and intuitive.</p>
           </div>
-          <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-            <h3 className="text-white font-semibold text-lg" style={{fontFamily: 'Georgia, serif'}}>Speed with purpose</h3>
-            <p className="text-white/70 mt-1 leading-normal" style={{fontFamily: 'Georgia, serif'}}>We move quickly and ship thoughtfully, guided by outcomes that matter to users.</p>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-white font-semibold text-xl font-sans">Speed with purpose</h3>
+            <p className="text-white/70 mt-2 leading-relaxed font-sans">We move quickly and ship thoughtfully, guided by outcomes that matter to users.</p>
           </div>
-          <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-            <h3 className="text-white font-semibold text-lg" style={{fontFamily: 'Georgia, serif'}}>Together, better</h3>
-            <p className="text-white/70 mt-1 leading-normal" style={{fontFamily: 'Georgia, serif'}}>We collaborate across disciplines and brands, sharing systems and learnings.</p>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-white font-semibold text-xl font-sans">Together, better</h3>
+            <p className="text-white/70 mt-2 leading-relaxed font-sans">We collaborate across disciplines and brands, sharing systems and learnings.</p>
           </div>
         </div>
       </section>

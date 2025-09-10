@@ -19,10 +19,10 @@ const AboutRush = () => {
               <p className="text-[#0a132e]/80 leading-normal">
                 From concept to launch, Rush powers the user journey—secure, performant, and human‑centered.
               </p>
-              <a href="#" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
+              <Link to="/about" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
                 Learn more about Rush
                 <span aria-hidden>→</span>
-              </a>
+              </Link>
             </div>
             <div className="relative py-3 md:py-6 flex md:justify-end">
               <img src="/pic1.png" alt="Rush offices" className="w-[85%] md:w-[70%] h-auto shadow-xl" />
@@ -49,10 +49,10 @@ const AboutRush = () => {
               <p className="text-[#0a132e]/80 leading-normal">
                 Together, we build products millions love—while building a culture where everyone can thrive.
               </p>
-              <a href="#" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
+              <Link to="/about#team" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
                 Meet the team
                 <span aria-hidden>→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -75,10 +75,10 @@ const AboutRush = () => {
               <p className="text-[#0a132e]/80 leading-normal">
                 From early ideas to global launches, Rush supports the full journey—so teams can focus on what matters most: delighting users.
               </p>
-              <a href="#" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
+              <Link to="/brands" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
                 Explore our brands
                 <span aria-hidden>→</span>
-              </a>
+              </Link>
             </div>
 
             {/* Image on the right */}

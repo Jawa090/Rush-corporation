@@ -490,6 +490,97 @@ const InvestorCenterPage = () => {
         </div>
       </section>
 
+      {/* Investment Thesis */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">Why invest in Rush</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 className="text-white font-semibold text-lg mb-2">Durable growth</h3>
+              <p className="text-white/70">Diversified portfolio across resilient software categories with strong retention and upsell.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 className="text-white font-semibold text-lg mb-2">Shared platform</h3>
+              <p className="text-white/70">Common infrastructure, design systems, and GTM engine accelerate new brand scale efficiently.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 className="text-white font-semibold text-lg mb-2">Cash discipline</h3>
+              <p className="text-white/70">Profitable unit economics, measured capital allocation, and focus on sustainable free cash flow.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ESG & Governance */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <h3 className="text-white text-2xl font-bold mb-3">ESG Highlights</h3>
+              <ul className="space-y-2 text-white/80 list-disc list-inside">
+                <li>Carbon‑aware cloud deployments; >70% workloads on renewable-backed regions</li>
+                <li>Privacy by design; regular third‑party security assessments (SOC2‑aligned)</li>
+                <li>Inclusive hiring and pay equity reviews; global code of conduct</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <h3 className="text-white text-2xl font-bold mb-3">Corporate Governance</h3>
+              <ul className="space-y-2 text-white/80 list-disc list-inside">
+                <li>Independent audit and compensation committees</li>
+                <li>Clear capital allocation framework reviewed quarterly</li>
+                <li>Shareholder communications program with regular updates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap & Milestones */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="text-white text-2xl font-bold mb-4 text-center">Upcoming milestones</h3>
+          <div className="grid md:grid-cols-4 gap-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+              <div className="text-white font-semibold mb-1">Q2</div>
+              <p className="text-white/70">Launch AI‑assisted workflows in two brands</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+              <div className="text-white font-semibold mb-1">Q3</div>
+              <p className="text-white/70">Expand to 3 new regions; optimize gross margin +200bps</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+              <div className="text-white font-semibold mb-1">Q4</div>
+              <p className="text-white/70">Ship unified design system v3 across portfolio</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+              <div className="text-white font-semibold mb-1">FY</div>
+              <p className="text-white/70">Target EBITDA margin expansion with operating leverage</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-8">
+        <div className="max-w-5xl mx-auto px-6">
+          <h3 className="text-white text-2xl font-bold mb-4 text-center">Investor FAQs</h3>
+          <div className="space-y-4">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <div className="text-white font-semibold">What drives long‑term growth?</div>
+              <p className="text-white/70">New product launches, international expansion, and cross‑sell within our installed base.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <div className="text-white font-semibold">How do you think about capital allocation?</div>
+              <p className="text-white/70">Prioritize organic investment, selective M&A with clear synergies, and disciplined returns.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <div className="text-white font-semibold">Profitability vs growth?</div>
+              <p className="text-white/70">Balanced approach—maintain attractive growth while expanding free cash flow over time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {React.createElement(Footer)}
     </div>
   );

@@ -1,126 +1,156 @@
 import React, { useMemo } from 'react';
 
-const CompaniesGraph = () => {
+const ProfessionalLogoShowcase = () => {
   const logos = useMemo(
     () => [
-      '/logo2.png',
-      '/logo3.png',
-      '/logo4.png',
-      '/logo5.png',
-      '/logo6.png',
-      '/logo7.png',
-      '/logo8.png',
+      { src: '/logo2.png', url: 'https://paradiseestimating.com/', name: 'Paradise Estimating' },
+      { src: '/logo3.png', url: 'https://estimatinghub.com/', name: 'Estimating Hub' },
+      { src: '/logo4.png', url: 'https://decexperts.com/', name: 'DEC Experts' },
+      { src: '/logo5.png', url: 'http://www.remoteseat.com/', name: 'Remote Seat' },
+      { src: '/logo6.png', url: '#', name: 'Contractor List' },
+      { src: '/logo7.png', url: 'https://fusioncortex.com/', name: 'Fusion Cortex' },
+      { src: '/logo8.png', url: 'https://3remotors.com/', name: '3RE Motors' },
+      { src: '/logo9.png', url: 'https://bitwords.com/', name: 'Bitwords' },
     ],
     []
   );
 
-  const featured = '/logo7.png';
-  const secondaryFeatured = '/logo9.png';
-  const others = useMemo(() => logos.filter((l) => l !== featured && l !== secondaryFeatured), [logos, secondaryFeatured]);
-
-  const linkMap = useMemo(
-    () => ({
-      '/logo2.png': 'https://paradiseestimating.com/',
-      '/logo3.png': 'https://estimatinghub.com/',
-      '/logo4.png': 'https://decexperts.com/',
-      '/logo5.png': 'http://www.remoteseat.com/',
-      '/logo7.png': 'https://fusioncortex.com/',
-      '/logo8.png': 'https://3remotors.com/',
-      '/logo9.png': 'https://bitwords.com/',
-    }),
-    []
-  );
-
-  const rows = useMemo(() => {
-    const chunked = [];
-    for (let i = 0; i < others.length; i += 3) {
-      chunked.push(others.slice(i, i + 3));
-    }
-    return chunked;
-  }, [others]);
-
   return (
-    <section className="relative pt-6 pb-0 -mb-40 md:-mb-56 lg:-mb-64" style={{ backgroundColor: '#0a132e' }}>
-      <style>{`
-        @keyframes rowBob {
-          0%   { transform: translateY(0) }
-          50%  { transform: translateY(-2px) }
-          100% { transform: translateY(0) }
-        }
-      `}</style>
-      <div className="max-w-6xl mx-auto space-y-0">
+    <section className="relative py-8 bg-gradient-to-b from-[#0a132e] to-[#1a2b5f] overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_70%)] opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-6">
           <div className="flex justify-center mb-4">
-            <img src="/R.png" alt="Rush" className="h-20 md:h-24 lg:h-28 w-auto" />
+            <div className="relative">
+              <img 
+                src="/R.png" 
+                alt="Rush" 
+                className="relative h-24 md:h-32 lg:h-40 w-auto drop-shadow-xl"
+              />
+            </div>
           </div>
-          <div className="mt-3 h-1 w-24 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" />
-          <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-            Partners and brands moving with us to shape the future.
+          
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+            Trusted by Industry Leaders
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-3"></div>
+          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+            Partnering with innovative brands to shape the future of technology and business.
           </p>
         </div>
 
-        {/* Featured top logos row */}
-        <div className="flex items-center justify-center gap-6">
-          <a
-            href={linkMap[secondaryFeatured]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group focus:outline-none focus:ring-0 rounded"
-            aria-label="Secondary featured company link"
-          >
-            <img
-              src={secondaryFeatured}
-              alt="Company logo"
-              className="w-[150px] md:w-[200px] lg:w-[260px] h-auto opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105 drop-shadow-[0_0_22px_rgba(0,0,0,0.18)]"
-            />
-          </a>
-          <a
-            href={linkMap[featured]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group focus:outline-none focus:ring-0 rounded"
-            aria-label="Featured company link"
-          >
-            <img
-              src={featured}
-              alt="Company logo"
-              className="w-[60px] md:w-[90px] lg:w-[120px] h-auto filter invert brightness-110 opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105 drop-shadow-[0_0_22px_rgba(255,255,255,0.18)]"
-            />
-          </a>
-        </div>
-
-        {/* Two rows with 3 logos each */}
-        {rows.map((row, rowIndex) => (
-          <div
-            key={rowIndex}
-            className="flex items-center justify-center gap-4 md:gap-6 lg:gap-8"
-            style={{ animation: `rowBob 6s ease-in-out ${rowIndex * 0.6}s infinite` }}
-          >
-            {row.map((src, colIndex) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+          {logos.map((logo, index) => (
+            <div 
+              key={index}
+              className="group relative flex items-center justify-center p-6 bg-gray-800/30 rounded-xl backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10"
+              style={{ 
+                transitionDelay: `${index * 100}ms`,
+                animation: `fadeIn 0.5s ease-out ${index * 0.1}s both`
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-500"></div>
+              
               <a
-                key={`${rowIndex}-${colIndex}`}
-                href={linkMap[src] || '#'}
+                href={logo.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group focus:outline-none focus:ring-0 rounded"
-                aria-label="Company link"
+                className="relative z-10 flex items-center justify-center w-full h-full"
               >
-                <img
-                  src={src}
-                  alt="Company logo"
-                  className={`${src === '/logo5.png' ? 'w-[260px] md:w-[300px] lg:w-[360px] relative -top-[40px] md:-top-[56px] lg:-top-[68px]' : 'w-[180px] md:w-[220px] lg:w-[240px]'} ${src === '/logo6.png' || src === '/logo8.png' ? 'relative -top-[100px] md:-top-[140px] lg:-top-[180px]' : ''} ${src === '/logo5.png' || src === '/logo6.png' || src === '/logo8.png' ? 'relative -left-[20px] md:-left-[28px] lg:-left-[36px]' : ''} h-auto ${src === '/logo2.png' || src === '/logo3.png' ? '' : 'filter invert brightness-110'} opacity-85 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105 drop-shadow-[0_0_18px_rgba(255,255,255,0.15)]`}
-                />
+                {logo.name === 'DEC Experts' ? (
+                  <svg
+                    viewBox="0 0 760 200"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="DECEXPERTS logo"
+                    className="w-full h-auto max-h-16 transition-transform duration-500 group-hover:scale-110"
+                  >
+                    <title>DECEXPERTS logo</title>
+                    <desc>Yellow triangle with DEC and outlined EXPERTS</desc>
+                    <polygon points="40,20 200,20 120,160" fill="#FFFFFF" />
+                    <text
+                      x="116"
+                      y="106"
+                      fontFamily="Orbitron, system-ui, sans-serif"
+                      fontWeight="700"
+                      fontSize="52"
+                      textAnchor="middle"
+                      fill="#000000"
+                      style={{ letterSpacing: '4px' }}
+                    >
+                      DEC
+                    </text>
+                    <text
+                      x="300"
+                      y="118"
+                      fontFamily="Orbitron, system-ui, sans-serif"
+                      fontWeight="400"
+                      fontSize="56"
+                      textAnchor="start"
+                      fill="none"
+                      stroke="#FFFFFF"
+                      strokeWidth="1.4"
+                      style={{ letterSpacing: '9px' }}
+                    >
+                      EXPERTS
+                    </text>
+                  </svg>
+                ) : logo.name === 'Remote Seat' ? (
+                  <div className="flex items-center justify-center select-none">
+                    <span
+                      className="font-black tracking-wide text-base md:text-lg lg:text-xl"
+                      style={{ color: 'transparent', WebkitTextStroke: '1px #FFFFFF' }}
+                    >
+                      REMOTE
+                    </span>
+                    <span className="mx-1" />
+                    <span className="font-black tracking-wide text-base md:text-lg lg:text-xl text-white">SEAT</span>
+                  </div>
+                ) : (
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="w-full h-auto max-h-16 object-contain filter brightness-0 invert opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                  />
+                )}
               </a>
-            ))}
-            {row.length < 3 && Array.from({ length: 3 - row.length }).map((_, i) => (
-              <span key={`spacer-${i}`} className="w-[180px] md:w-[220px] lg:w-[240px]" />
+              
+            </div>
             ))}
           </div>
-        ))}
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-8px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+        
+        .group:hover {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
 
-export default CompaniesGraph;
-
+export default ProfessionalLogoShowcase;
