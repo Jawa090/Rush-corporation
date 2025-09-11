@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: isProduction ? 'bundle.[contenthash].js' : 'bundle.js',
-    publicPath: '/',
+    publicPath: './',
     clean: true,
   },
   module: {
@@ -74,7 +74,7 @@ module.exports = {
   })(),
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, 'dist'),
     },
     compress: true,
     port: 3000,
