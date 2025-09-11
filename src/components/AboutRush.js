@@ -9,7 +9,7 @@ const AboutRush = () => {
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#0a132e] mb-3">Our company</h2>
+              <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our company</h2>
               <p className="text-[#0a132e]/80 leading-normal mb-2">
                 Rush is a global technology group building platforms and products that bring people closer to the magic of innovation. We connect brands, creators, and customers through delightful digital experiences.
               </p>
@@ -39,7 +39,7 @@ const AboutRush = () => {
               <img src="/pic2.png" alt="Rush people" className="w-[85%] md:w-[70%] h-auto shadow-lg" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#0a132e] mb-3">Our people</h2>
+              <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our people</h2>
               <p className="text-[#0a132e]/80 leading-normal mb-2">
                 People are at the heart of Rush. We’re a community of designers, engineers, storytellers, and operators who care deeply about craft and impact.
               </p>
@@ -65,7 +65,7 @@ const AboutRush = () => {
           <div className="grid md:grid-cols-2 gap-6 items-center">
             {/* Text on the left */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#0a132e] mb-3">Our brands</h2>
+              <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our brands</h2>
               <p className="text-[#0a132e]/80 leading-normal mb-2">
                 Rush empowers a family of brands across software, media, and commerce. Each brand is built to serve a focused community with products that feel fast, simple, and joyful.
               </p>
@@ -93,7 +93,7 @@ const AboutRush = () => {
       <section className="relative py-8">
         <div className="absolute inset-0 bg-white" />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0a132e] leading-snug">
+          <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] leading-snug">
             The global leader in delivering software and tech for the film industry
           </h2>
           <div className="mt-3 h-1 w-24 mx-auto rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" />

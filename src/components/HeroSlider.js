@@ -94,15 +94,15 @@ const HeroSlider = () => {
                 {/* Text Content */}
                 <div className={`text-center md:text-left space-y-4 md:space-y-6 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                   <div className="space-y-3 md:space-y-4">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display text-white leading-tight tracking-tight">
                       <span className="block bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
                         {slide.title}
                       </span>
                     </h1>
-                    <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white/90" style={{fontFamily: 'Georgia, serif'}}>
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-display text-white/90">
                       {slide.subtitle}
                     </h2>
-                    <p className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto md:mx-0" style={{fontFamily: 'Georgia, serif'}}>
+                    <p className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto md:mx-0 font-body">
                       {slide.description}
                     </p>
                   </div>

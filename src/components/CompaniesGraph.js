@@ -3,14 +3,14 @@ import React, { useMemo } from 'react';
 const ProfessionalLogoShowcase = () => {
   const logos = useMemo(
     () => [
+      { src: '/logo9.png', url: 'https://bitwords.com/', name: 'Bitwords' },
+      { src: '/logo7.png', url: 'https://fusioncortex.com/', name: 'Fusion Cortex' },
+      { src: '/logo5.png', url: 'http://www.remoteseat.com/', name: 'Remote Seat' },
+      { src: '/logo6.png', url: '#', name: 'Contractor List' },
       { src: '/logo2.png', url: 'https://paradiseestimating.com/', name: 'Paradise Estimating' },
       { src: '/logo3.png', url: 'https://estimatinghub.com/', name: 'Estimating Hub' },
       { src: '/logo4.png', url: 'https://decexperts.com/', name: 'DEC Experts' },
-      { src: '/logo5.png', url: 'http://www.remoteseat.com/', name: 'Remote Seat' },
-      { src: '/logo6.png', url: '#', name: 'Contractor List' },
-      { src: '/logo7.png', url: 'https://fusioncortex.com/', name: 'Fusion Cortex' },
       { src: '/logo8.png', url: 'https://3remotors.com/', name: '3RE Motors' },
-      { src: '/logo9.png', url: 'https://bitwords.com/', name: 'Bitwords' },
     ],
     []
   );
@@ -31,7 +31,7 @@ const ProfessionalLogoShowcase = () => {
             </div>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+          <h2 className="text-3xl md:text-4xl font-display text-white mb-2">
             Trusted by Industry Leaders
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-3"></div>
@@ -72,7 +72,7 @@ const ProfessionalLogoShowcase = () => {
                     <text
                       x="116"
                       y="106"
-                      fontFamily="Orbitron, system-ui, sans-serif"
+                      fontFamily="Poppins, Inter, system-ui, sans-serif"
                       fontWeight="700"
                       fontSize="52"
                       textAnchor="middle"
@@ -84,7 +84,7 @@ const ProfessionalLogoShowcase = () => {
                     <text
                       x="300"
                       y="118"
-                      fontFamily="Orbitron, system-ui, sans-serif"
+                      fontFamily="Poppins, Inter, system-ui, sans-serif"
                       fontWeight="400"
                       fontSize="56"
                       textAnchor="start"

@@ -20,7 +20,7 @@ const AboutPage = () => {
             <img src="/logo1.png" alt="Rush" className="h-16 w-auto" />
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-2" style={{fontFamily: 'Inter, Segoe UI, Roboto, system-ui, -apple-system'}}>
+        <nav className="hidden md:flex items-center gap-2">
           <Link to="/" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Home</Link>
           <Link to="/brands" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Group brands</Link>
           <span className="px-3 py-2 text-sm font-semibold tracking-wide text-white rounded-md bg-white/10">About us</span>
@@ -31,22 +31,24 @@ const AboutPage = () => {
 
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-6 pt-6">
-        <div className="grid md:grid-cols-2 gap-6 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
           <div>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight font-sans">
+            <h1 className="text-3xl md:text-5xl font-display tracking-tight">
               <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">About Rush</span>
             </h1>
             <div className="mt-3 h-1.5 w-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
-            <p className="mt-4 text-white/90 leading-relaxed text-lg font-sans max-w-2xl">
-              Rush is a technology corporation focused on building platforms and products that
-              bring people closer to the magic of innovation. We combine design, engineering,
-              and data to craft reliable, joyful experiences at global scale.
-            </p>
-            <p className="mt-3 text-white/80 leading-relaxed text-lg font-sans max-w-2xl">
-              Our mission is simple: make powerful technology feel effortless. We support a
-              growing family of brands with shared infrastructure, design systems, and culture—
-              so teams can move faster and deliver consistent quality to millions of users.
-            </p>
+            <div className="mt-4 space-y-3 md:space-y-4 md:max-w-3xl">
+              <p className="text-white/90 leading-relaxed text-lg font-body">
+                Rush is a technology corporation focused on building platforms and products that
+                bring people closer to the magic of innovation. We combine design, engineering,
+                and data to craft reliable, joyful experiences at global scale.
+              </p>
+              <p className="text-white/80 leading-relaxed text-lg font-body">
+                Our mission is simple: make powerful technology feel effortless. We support a
+                growing family of brands with shared infrastructure, design systems, and culture—
+                so teams can move faster and deliver consistent quality to millions of users.
+              </p>
+            </div>
           </div>
           <div className="relative">
             <div className="absolute inset-0 pointer-events-none select-none">
@@ -56,27 +58,31 @@ const AboutPage = () => {
             <img src="/R.png" alt="Rush" className="relative z-10 w-[220px] md:w-[280px] mx-auto drop-shadow-2xl" />
           </div>
         </div>
+        {/* subtle divider */}
+        <div className="mt-8 md:mt-10 h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
       {/* About - More Content */}
       <section className="max-w-7xl mx-auto px-6 mt-8">
         <div className="grid md:grid-cols-2 gap-6 items-start">
           <div>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">What we do</h2>
-            <p className="text-white/80 leading-relaxed mb-3">
-              We partner with ambitious teams to design, build, and scale modern software products. From
-              cloud-native backends and real‑time collaboration to beautiful, responsive interfaces—our work
-              blends engineering precision with product craft.
-            </p>
-            <p className="text-white/80 leading-relaxed mb-3">
-              Our platform approach lets brands share infrastructure, security, and design systems. That means
-              faster delivery, consistent quality, and the freedom for each brand to focus on what makes it
-              special.
-            </p>
-            <p className="text-white/80 leading-relaxed">
-              Reliability, performance, and accessibility are non‑negotiable. We observe, measure, and iterate—
-              shipping small, learning fast, and scaling what works to millions of users.
-            </p>
+            <h2 className="text-2xl md:text-3xl font-display text-white mb-3">What we do</h2>
+            <div className="space-y-3 md:space-y-4 md:max-w-3xl">
+              <p className="text-white/80 leading-relaxed">
+                We partner with ambitious teams to design, build, and scale modern software products. From
+                cloud-native backends and real‑time collaboration to beautiful, responsive interfaces—our work
+                blends engineering precision with product craft.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                Our platform approach lets brands share infrastructure, security, and design systems. That means
+                faster delivery, consistent quality, and the freedom for each brand to focus on what makes it
+                special.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                Reliability, performance, and accessibility are non‑negotiable. We observe, measure, and iterate—
+                shipping small, learning fast, and scaling what works to millions of users.
+              </p>
+            </div>
           </div>
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
             <h3 className="text-white font-semibold text-lg mb-4">Our focus areas</h3>
@@ -112,7 +118,7 @@ const AboutPage = () => {
       {/* Team - Beautiful Enhanced Section */}
       <section className="max-w-7xl mx-auto px-6 mt-20">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Meet Our Leadership Team</h2>
+          <h2 className="text-3xl md:text-4xl font-display text-white mb-4">Meet Our Leadership Team</h2>
           <p className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
             Visionary leaders driving innovation and growth across our portfolio of technology companies.
           </p>
@@ -177,11 +183,11 @@ const AboutPage = () => {
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                   </a>
-                                     <a href="#" className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white/70 hover:text-white transition-all duration-300 hover:scale-110">
-                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                     </svg>
-                   </a>
+                  <a href="#" className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white/70 hover:text-white transition-all duration-300 hover:scale-110">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -212,7 +218,7 @@ const AboutPage = () => {
       {/* CTA */}
       <section className="relative py-12 mt-12" style={{ backgroundColor: '#e8f1ff' }}>
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h3 className="text-2xl md:text-3xl font-extrabold text-[#0a132e]">Want to build with us?</h3>
+          <h3 className="text-2xl md:text-3xl font-display text-[#0a132e]">Want to build with us?</h3>
           <p className="mt-4 text-[#0a132e]/80 leading-7">We're always looking for curious minds who love craft and impact.</p>
           <a href="#/contact" className="mt-6 inline-flex px-5 py-2.5 rounded-md bg-[#0a132e] text-white font-semibold hover:bg-[#0b1740]">Join Rush</a>
         </div>

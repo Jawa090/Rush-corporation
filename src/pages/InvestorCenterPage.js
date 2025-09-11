@@ -4,6 +4,68 @@ import { Link } from 'react-router-dom';
 const InvestorCenterPage = () => {
   const Footer = require('../components/Footer').default;
 
+  // Refs and dynamic connectors for the org tree
+  const treeRef = React.useRef(null);
+  const refRoot = React.useRef(null);
+  const refBitwords = React.useRef(null);
+  const refFusion = React.useRef(null);
+  const refRemote = React.useRef(null);
+  const refContractor = React.useRef(null);
+  const refParadise = React.useRef(null);
+  const refEstimatingHub = React.useRef(null);
+  const refDecExperts = React.useRef(null);
+  const refMotors = React.useRef(null);
+  const [connectorPaths, setConnectorPaths] = React.useState([]);
+
+  React.useLayoutEffect(() => {
+    const compute = () => {
+      const container = treeRef.current;
+      if (!container) return;
+      const containerRect = container.getBoundingClientRect();
+      const center = (ref) => {
+        const el = ref?.current;
+        if (!el) return null;
+        const r = el.getBoundingClientRect();
+        return { x: r.left + r.width / 2 - containerRect.left, y: r.top + r.height / 2 - containerRect.top };
+      };
+
+      const pairs = [
+        [refRoot, refBitwords],
+        [refRoot, refFusion],
+        [refRoot, refRemote],
+        // Removed middle root-to-contractor connector to hide the center line
+        // [refRoot, refContractor],
+        [refContractor, refParadise],
+        [refContractor, refEstimatingHub],
+        [refContractor, refDecExperts],
+        [refContractor, refMotors],
+      ];
+
+      const paths = [];
+      for (const [a, b] of pairs) {
+        const p1 = center(a);
+        const p2 = center(b);
+        if (!p1 || !p2) continue;
+        const yMid = (p1.y + p2.y) / 2;
+        // Orthogonal elbow path: down, across, down
+        const d = `M ${p1.x} ${p1.y} L ${p1.x} ${yMid} L ${p2.x} ${yMid} L ${p2.x} ${p2.y}`;
+        paths.push(d);
+      }
+      setConnectorPaths(paths);
+    };
+
+    compute();
+    const ro = new ResizeObserver(() => compute());
+    if (treeRef.current) ro.observe(treeRef.current);
+    window.addEventListener('resize', compute);
+    const id = setInterval(compute, 400); // recalc as content loads
+    return () => {
+      window.removeEventListener('resize', compute);
+      clearInterval(id);
+      ro.disconnect();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#0a132e' }}>
       {/* Header */}
@@ -13,7 +75,7 @@ const InvestorCenterPage = () => {
             <img src="/logo1.png" alt="Rush" className="h-16 w-auto" />
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-2" style={{fontFamily: 'Inter, Segoe UI, Roboto, system-ui, -apple-system'}}>
+        <nav className="hidden md:flex items-center gap-2">
           <Link to="/" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Home</Link>
           <Link to="/brands" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Group brands</Link>
           <Link to="/about" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">About us</Link>
@@ -29,10 +91,10 @@ const InvestorCenterPage = () => {
           <div className="absolute w-[300px] h-[300px] rounded-full bg-purple-600 blur-[140px] opacity-20 left-0 bottom-0" style={{mixBlendMode: 'screen'}} />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-3">
+          <h1 className="text-4xl md:text-6xl font-display text-white tracking-tight mb-3">
             Investor Center
           </h1>
-          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-snug">
+          <p className="text-base md:text-lg text-white/80 max-w-4xl mx-auto leading-snug font-body">
             Discover Rush Corporation's growth story, financial performance, and investment opportunities in the rapidly evolving technology landscape.
           </p>
           <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
@@ -79,7 +141,7 @@ const InvestorCenterPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">About Rush Corporation</h2>
+              <h2 className="text-3xl md:text-4xl font-display text-white mb-3">About Rush Corporation</h2>
               <p className="text-white/80 leading-normal mb-2">
                 Rush Corporation is a leading technology holding company that operates and invests in innovative software companies across multiple sectors. Founded in 2018, we've built a portfolio of complementary businesses that serve diverse markets while sharing common technology infrastructure and design principles.
               </p>
@@ -121,160 +183,127 @@ const InvestorCenterPage = () => {
       {/* Portfolio Companies - Growth Tree */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">Our Portfolio Companies</h2>
+          <h2 className="text-3xl md:text-4xl font-display text-white text-center mb-6">Our Portfolio Companies</h2>
           <p className="text-white/70 text-center mb-8 max-w-3xl mx-auto">
             A diversified portfolio of high-growth technology companies, each positioned for market leadership in their respective sectors.
           </p>
           
-                     {/* Organizational Tree Chart */}
-           <div className="relative mb-8">
-             {/* Central Rush Node */}
-             <div className="flex justify-center mb-8">
-               <div className="relative">
-                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-30"></div>
-                 <div className="relative bg-white/10 border border-white/20 rounded-xl p-6 backdrop-blur-sm">
-                   <h3 className="text-white font-bold text-xl text-center">Rush Corporation</h3>
-                   <p className="text-white/60 text-sm text-center mt-1">Parent Company</p>
-                 </div>
-               </div>
-             </div>
+          {/* Organizational Tree Chart */}
+          <div ref={treeRef} className="relative mb-8 z-0">
+            {/* Dynamic connectors */}
+            <div className="hidden md:block absolute inset-0 pointer-events-none z-20">
+              <svg className="w-full h-full">
+                <defs>
+                  <linearGradient id="orgLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="#a78bfa" stopOpacity="0.5" />
+                  </linearGradient>
+                </defs>
+                {connectorPaths.map((d, i) => (
+                  <path key={i} d={d} stroke="url(#orgLine)" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.45" />
+                ))}
+              </svg>
+            </div>
 
-             {/* Connection Lines */}
-             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
-               <svg className="w-full h-full" viewBox="0 0 1200 800">
-                 <defs>
-                   <linearGradient id="treeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                     <stop offset="0%" style={{stopColor: '#3B82F6', stopOpacity: 0.4}} />
-                     <stop offset="100%" style={{stopColor: '#8B5CF6', stopOpacity: 0.4}} />
-                   </linearGradient>
-                 </defs>
-                 {/* Tree structure lines */}
-                 <path d="M 600 200 L 200 350" stroke="url(#treeGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
-                 <path d="M 600 200 L 400 350" stroke="url(#treeGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
-                 <path d="M 600 200 L 600 350" stroke="url(#treeGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
-                 <path d="M 600 200 L 800 350" stroke="url(#treeGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
-                 <path d="M 600 200 L 1000 350" stroke="url(#treeGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
-                 <path d="M 600 200 L 1200 350" stroke="url(#treeGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
-                 
-                 {/* Second level connections */}
-                 <path d="M 200 350 L 150 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 200 350 L 250 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 400 350 L 350 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 400 350 L 450 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 600 350 L 550 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 600 350 L 650 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 800 350 L 750 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 800 350 L 850 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 1000 350 L 950 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 1000 350 L 1050 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 1200 350 L 1150 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-                 <path d="M 1200 350 L 1250 500" stroke="url(#treeGradient)" strokeWidth="2" fill="none" opacity="0.4"/>
-               </svg>
-             </div>
+            {/* Rush (root) */}
+            <div className="flex justify-center mb-8 relative z-10">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-30"></div>
+                <div ref={refRoot} className="relative bg-white/10 border border-white/20 rounded-xl px-8 py-6 backdrop-blur-sm text-center">
+                  <h3 className="text-white font-display text-xl">Rush Corporation</h3>
+                  <p className="text-white/60 text-sm mt-1">Parent Company</p>
+                </div>
+              </div>
+            </div>
 
-             {/* First Level - Major Companies */}
-             <div className="grid grid-cols-6 gap-3 mb-6">
-               <div className="relative group">
-                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                   <div className="text-center">
-                     <h4 className="text-white font-semibold text-sm mb-2">Paradise Estimating</h4>
-                     <div className="text-green-400 text-xs font-medium">+35% YoY</div>
-                     <div className="text-white/60 text-xs mt-1">$180M</div>
-                   </div>
-                 </div>
-               </div>
+            {/* Level 2: Bitwords, Fusion Cortex, Remote Seat */}
+            <div className="grid grid-cols-5 gap-4 mb-6 relative z-10">
+              <div className="col-start-2">
+                <div ref={refBitwords} className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">Bitwords</h4>
+                    <div className="text-green-400 text-xs font-medium">+28% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$210M</div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-start-3">
+                <div ref={refFusion} className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">Fusion Cortex</h4>
+                    <div className="text-green-400 text-xs font-medium">+38% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$450M</div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-start-4">
+                <div ref={refRemote} className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">Remote Seat</h4>
+                    <div className="text-green-400 text-xs font-medium">+48% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$210M</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-               <div className="relative group">
-                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                   <div className="text-center">
-                     <h4 className="text-white font-semibold text-sm mb-2">Estimating Hub</h4>
-                     <div className="text-green-400 text-xs font-medium">+42% YoY</div>
-                     <div className="text-white/60 text-xs mt-1">$95M</div>
-                   </div>
-                 </div>
-               </div>
+            {/* Level 2: Contractor List */}
+            <div className="grid grid-cols-5 mb-4 relative z-10">
+              <div className="col-start-3">
+                <div ref={refContractor} className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">Contractor List</h4>
+                    <div className="text-green-400 text-xs font-medium">+55% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$75M</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-               <div className="relative group">
-                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                   <div className="text-center">
-                     <h4 className="text-white font-semibold text-sm mb-2">DEC Experts</h4>
-                     <div className="text-green-400 text-xs font-medium">+28% YoY</div>
-                     <div className="text-white/60 text-xs mt-1">$320M</div>
-                   </div>
-                 </div>
-               </div>
+            {/* Level 3: Children of Contractor List */}
+            <div className="grid grid-cols-5 gap-4 mb-6 relative z-10">
+              <div className="col-start-2">
+                <div ref={refParadise} className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">Paradise Estimating</h4>
+                    <div className="text-green-400 text-xs font-medium">+35% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$180M</div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-start-3">
+                <div ref={refEstimatingHub} className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">Estimating Hub</h4>
+                    <div className="text-green-400 text-xs font-medium">+42% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$95M</div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-start-4">
+                <div ref={refDecExperts} className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">DEC Experts</h4>
+                    <div className="text-green-400 text-xs font-medium">+28% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$320M</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-               <div className="relative group">
-                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                   <div className="text-center">
-                     <h4 className="text-white font-semibold text-sm mb-2">Remote Seat</h4>
-                     <div className="text-green-400 text-xs font-medium">+48% YoY</div>
-                     <div className="text-white/60 text-xs mt-1">$210M</div>
-                   </div>
-                 </div>
-               </div>
-
-               <div className="relative group">
-                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                   <div className="text-center">
-                     <h4 className="text-white font-semibold text-sm mb-2">Contractor List</h4>
-                     <div className="text-green-400 text-xs font-medium">+55% YoY</div>
-                     <div className="text-white/60 text-xs mt-1">$75M</div>
-                   </div>
-                 </div>
-               </div>
-
-               <div className="relative group">
-                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                   <div className="text-center">
-                     <h4 className="text-white font-semibold text-sm mb-2">Fusion Cortex</h4>
-                     <div className="text-green-400 text-xs font-medium">+38% YoY</div>
-                     <div className="text-white/60 text-xs mt-1">$450M</div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-
-             {/* Second Level - Subsidiaries */}
-             <div className="grid grid-cols-12 gap-2">
-               <div className="col-span-2">
-                 <div className="bg-white/5 border border-white/10 rounded p-2 text-center">
-                   <h5 className="text-white font-medium text-xs">Construction Tech</h5>
-                   <div className="text-green-400 text-xs">+25%</div>
-                 </div>
-               </div>
-               <div className="col-span-2">
-                 <div className="bg-white/5 border border-white/10 rounded p-2 text-center">
-                   <h5 className="text-white font-medium text-xs">Project Management</h5>
-                   <div className="text-green-400 text-xs">+30%</div>
-                 </div>
-               </div>
-               <div className="col-span-2">
-                 <div className="bg-white/5 border border-white/10 rounded p-2 text-center">
-                   <h5 className="text-white font-medium text-xs">Enterprise Solutions</h5>
-                   <div className="text-green-400 text-xs">+22%</div>
-                 </div>
-               </div>
-               <div className="col-span-2">
-                 <div className="bg-white/5 border border-white/10 rounded p-2 text-center">
-                   <h5 className="text-white font-medium text-xs">Collaboration Tools</h5>
-                   <div className="text-green-400 text-xs">+40%</div>
-                 </div>
-               </div>
-               <div className="col-span-2">
-                 <div className="bg-white/5 border border-white/10 rounded p-2 text-center">
-                   <h5 className="text-white font-medium text-xs">Marketplace</h5>
-                   <div className="text-green-400 text-xs">+45%</div>
-                 </div>
-               </div>
-               <div className="col-span-2">
-                 <div className="bg-white/5 border border-white/10 rounded p-2 text-center">
-                   <h5 className="text-white font-medium text-xs">AI Development</h5>
-                   <div className="text-green-400 text-xs">+35%</div>
-                 </div>
-               </div>
-             </div>
-           </div>
+            {/* Level 2: 3RE Motors (last) */}
+            <div className="grid grid-cols-5 relative z-10">
+              <div className="col-start-3">
+                <div ref={refMotors} className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/20 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-sm mb-2">3RE Motors</h4>
+                    <div className="text-green-400 text-xs font-medium">+22% YoY</div>
+                    <div className="text-white/60 text-xs mt-1">$120M</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Growth Metrics Summary */}
           <div className="mt-8 grid md:grid-cols-3 gap-4">
@@ -297,7 +326,7 @@ const InvestorCenterPage = () => {
       {/* Financial Performance */}
       <section id="financials" className="py-8">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">Financial Performance</h2>
+          <h2 className="text-3xl md:text-4xl font-display text-white text-center mb-6">Financial Performance</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-2xl font-semibold text-white mb-3">Revenue Growth</h3>
@@ -348,7 +377,7 @@ const InvestorCenterPage = () => {
       {/* Growth Strategy */}
       <section id="strategy" className="py-8">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">Growth Strategy</h2>
+          <h2 className="text-3xl md:text-4xl font-display text-white text-center mb-6">Growth Strategy</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -518,7 +547,7 @@ const InvestorCenterPage = () => {
             <div className="bg-white/5 border border-white/10 rounded-xl p-6">
               <h3 className="text-white text-2xl font-bold mb-3">ESG Highlights</h3>
               <ul className="space-y-2 text-white/80 list-disc list-inside">
-                <li>Carbon‑aware cloud deployments; >70% workloads on renewable-backed regions</li>
+                <li>Carbon‑aware cloud deployments; &gt;70% workloads on renewable-backed regions</li>
                 <li>Privacy by design; regular third‑party security assessments (SOC2‑aligned)</li>
                 <li>Inclusive hiring and pay equity reviews; global code of conduct</li>
               </ul>
@@ -587,3 +616,4 @@ const InvestorCenterPage = () => {
 };
 
 export default InvestorCenterPage;
+

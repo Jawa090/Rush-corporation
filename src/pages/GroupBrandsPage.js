@@ -11,15 +11,6 @@ const brands = [
     bgColor: 'bg-gradient-to-br from-blue-600/20 to-purple-600/20'
   },
   { 
-    key: 'fusioncortex', 
-    name: 'Fusion Cortex', 
-    logo: '/logo7.png', 
-    about: 'Fusion Cortex delivers cutting-edge software services and solutions to businesses worldwide. Our team of experts specializes in creating custom software, AI integration, cloud solutions, and digital transformation services that help organizations stay ahead in the rapidly evolving technology landscape.',
-    tagline: 'Software Service Excellence',
-    bgColor: 'bg-gradient-to-br from-indigo-600/20 to-blue-500/20',
-    url: 'https://fusioncortex.com/'
-  },
-  { 
     key: 'bitwords', 
     name: 'Bitwords', 
     logo: '/logo9.png', 
@@ -27,6 +18,15 @@ const brands = [
     tagline: 'Global Digital Collaboration',
     bgColor: 'bg-gradient-to-br from-teal-500/20 to-emerald-600/20',
     url: 'https://bitwords.com/'
+  },
+  { 
+    key: 'fusioncortex', 
+    name: 'Fusion Cortex', 
+    logo: '/logo7.png', 
+    about: 'Fusion Cortex delivers cutting-edge software services and solutions to businesses worldwide. Our team of experts specializes in creating custom software, AI integration, cloud solutions, and digital transformation services that help organizations stay ahead in the rapidly evolving technology landscape.',
+    tagline: 'Software Service Excellence',
+    bgColor: 'bg-gradient-to-br from-indigo-600/20 to-blue-500/20',
+    url: 'https://fusioncortex.com/'
   },
   { 
     key: 'remoteseat', 
@@ -38,6 +38,14 @@ const brands = [
     url: 'http://www.remoteseat.com/'
   },
   { 
+    key: 'contractorlist', 
+    name: 'Contractor List', 
+    logo: '/logo6.png', 
+    about: 'Contractor List is a worldwide platform revolutionizing how businesses find and hire skilled contractors. With verified professionals across 100+ categories, we make it effortless to browse, connect with, and hire top talent. Our secure payment system and rating platform ensure quality results every time.',
+    tagline: 'Global Contractor Network',
+    bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-600/20'
+  },
+  { 
     key: 'paradise', 
     name: 'Paradise Estimating', 
     logo: '/logo2.png', 
@@ -45,15 +53,6 @@ const brands = [
     tagline: 'Precision Estimating Tools',
     bgColor: 'bg-gradient-to-br from-amber-500/20 to-orange-500/20',
     url: 'https://paradiseestimating.com/'
-  },
-  { 
-    key: 'decxperts', 
-    name: 'Decxperts', 
-    logo: '/logo4.png', 
-    about: 'Decxperts is a premier contractor services platform providing expert-led delivery and integration services. We connect organizations with vetted professionals across various industries, ensuring projects are completed with confidence and excellence. Our rigorous screening process guarantees top-tier talent for every project.',
-    tagline: 'Expert Contractor Services',
-    bgColor: 'bg-gradient-to-br from-sky-500/20 to-blue-600/20',
-    url: 'https://decexperts.com/'
   },
   { 
     key: 'estimatinghub', 
@@ -65,12 +64,13 @@ const brands = [
     url: 'https://estimatinghub.com/'
   },
   { 
-    key: 'contractorlist', 
-    name: 'Contractor List', 
-    logo: '/logo6.png', 
-    about: 'Contractor List is a worldwide platform revolutionizing how businesses find and hire skilled contractors. With verified professionals across 100+ categories, we make it effortless to browse, connect with, and hire top talent. Our secure payment system and rating platform ensure quality results every time.',
-    tagline: 'Global Contractor Network',
-    bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-600/20'
+    key: 'decxperts', 
+    name: 'Decxperts', 
+    logo: '/logo4.png', 
+    about: 'Decxperts is a premier contractor services platform providing expert-led delivery and integration services. We connect organizations with vetted professionals across various industries, ensuring projects are completed with confidence and excellence. Our rigorous screening process guarantees top-tier talent for every project.',
+    tagline: 'Expert Contractor Services',
+    bgColor: 'bg-gradient-to-br from-sky-500/20 to-blue-600/20',
+    url: 'https://decexperts.com/'
   },
   { 
     key: 'reemotors', 
@@ -124,7 +124,7 @@ const BrandCard = ({ brand, index }) => {
                     <text
                       x="196"
                       y="106"
-                      fontFamily="Orbitron, system-ui, sans-serif"
+                      fontFamily="Poppins, Inter, system-ui, sans-serif"
                       fontWeight="700"
                       fontSize="52"
                       textAnchor="middle"
@@ -136,7 +136,7 @@ const BrandCard = ({ brand, index }) => {
                     <text
                       x="300"
                       y="118"
-                      fontFamily="Orbitron, system-ui, sans-serif"
+                      fontFamily="Poppins, Inter, system-ui, sans-serif"
                       fontWeight="400"
                       fontSize="56"
                       textAnchor="start"
@@ -186,16 +186,16 @@ const BrandCard = ({ brand, index }) => {
         
         <div className="space-y-5 relative z-10">
           <div>
-            <span className="inline-block px-4 py-2 text-sm font-semibold text-white/80 bg-white/10 rounded-full mb-4">
+            <span className="inline-block px-4 py-2 text-sm font-caption text-white/80 bg-white/10 rounded-full mb-4">
               {brand.tagline}
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-display text-white mb-4">
               {brand.name}
             </h2>
             <div className="h-1 w-20 bg-white/30 rounded-full mb-6"></div>
           </div>
           
-          <p className="text-white/90 text-base md:text-lg leading-7 md:leading-8 max-w-3xl transition-all duration-300 font-light">
+          <p className="text-white/90 text-base md:text-lg leading-7 md:leading-8 max-w-3xl transition-all duration-300 font-body">
             {displayText}
           </p>
           
@@ -261,7 +261,7 @@ const GroupBrandsPage = () => {
             <img src="/logo1.png" alt="Rush" className="h-16 w-auto" />
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-1" style={{fontFamily: 'Inter, Segoe UI, Roboto, system-ui, -apple-system'}}>
+        <nav className="hidden md:flex items-center gap-1">
           <Link to="/" className="px-4 py-2.5 text-base font-medium text-white/90 hover:text-white rounded-lg transition-colors hover:bg-white/10">Home</Link>
           <span className="px-4 py-2.5 text-base font-medium text-white rounded-lg bg-white/10">Group brands</span>
           <Link to="/about" className="px-4 py-2.5 text-base font-medium text-white/90 hover:text-white rounded-lg transition-colors hover:bg-white/10">About us</Link>
@@ -278,7 +278,7 @@ const GroupBrandsPage = () => {
               <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 mr-3 animate-pulse"></span>
               Our Brand Portfolio
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
               <span className="block bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent leading-tight">
                 Group Brands
               </span>
@@ -292,7 +292,7 @@ const GroupBrandsPage = () => {
             {/* Centered Rush logo with beautiful background */}
             <div className="mt-6 flex flex-col items-center justify-center">
               <img src="/R.png" alt="Rush" className="block w-[180px] md:w-[220px] object-contain" />
-              <h3 className="mt-4 text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+              <h3 className="mt-4 text-2xl md:text-3xl font-display font-extrabold text-white tracking-tight">
                 Rush Corporation
               </h3>
               <div className="mx-auto mt-3 h-1.5 w-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
@@ -319,7 +319,7 @@ const GroupBrandsPage = () => {
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           <div className="mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
               The global leader in 
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 software innovation

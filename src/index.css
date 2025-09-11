@@ -1,3 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global font family with beautiful typography */
+* {
+  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Professional typography tokens */
+:root{
+  --font-display: 'Playfair Display', 'Inter', serif;
+  --font-heading: 'Poppins', 'Inter', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --tracking-tight: -0.02em;
+  --tracking-head: -0.01em;
+  --lh-tight: 1.1;
+  --lh-head: 1.2;
+  --lh-body: 1.6;
+}
+
+/* Beautiful typography utilities */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: var(--tracking-head);
+  line-height: var(--lh-head);
+}
+
+.font-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  letter-spacing: 0.01em;
+}
+
+.font-caption {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  letter-spacing: 0.025em;
+}
+
+/* Enhanced text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Base heading scale (responsive) */
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font-heading);
+  letter-spacing: var(--tracking-head);
+  line-height: var(--lh-head);
+  color: inherit;
+}
+
+h1{ font-size: 1.875rem; font-weight: 700; }
+h2{ font-size: 1.5rem;   font-weight: 700; }
+h3{ font-size: 1.25rem;  font-weight: 600; }
+h4{ font-size: 1.125rem; font-weight: 600; }
+h5{ font-size: 1rem;     font-weight: 600; }
+h6{ font-size: 0.9375rem;font-weight: 600; }
+
+@media (min-width: 640px){
+  h1{ font-size: 2.25rem; }
+  h2{ font-size: 1.875rem; }
+  h3{ font-size: 1.5rem; }
+}
+@media (min-width: 1024px){
+  h1{ font-size: 3rem; letter-spacing: var(--tracking-tight); line-height: var(--lh-tight); }
+  h2{ font-size: 2.25rem; }
+  h3{ font-size: 1.875rem; }
+}
+
+/* Paragraph defaults */
+p{ line-height: var(--lh-body); }
+
+/* Beautiful gradient text utilities */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

@@ -247,7 +247,7 @@ const ContactPage = () => {
             
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-1" style={{fontFamily: 'Inter, Segoe UI, Roboto, system-ui, -apple-system'}}>
+        <nav className="hidden md:flex items-center gap-1">
           <Link to="/" className="px-4 py-2 text-sm font-medium tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10">Home</Link>
           <Link to="/brands" className="px-4 py-2 text-sm font-medium tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10">Group brands</Link>
           <Link to="/about" className="px-4 py-2 text-sm font-medium tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10">About us</Link>
@@ -263,7 +263,7 @@ const ContactPage = () => {
             <span className="w-2 h-2 rounded-full bg-blue-400 mr-2 animate-pulse"></span>
             We're here to help
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
+          <h1 className="text-4xl md:text-5xl font-display text-white tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
             Get in touch with us
           </h1>
           <p className="mt-3 text-lg text-white/80 leading-normal max-w-2xl mx-auto">
@@ -278,14 +278,14 @@ const ContactPage = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Form */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-1">Send us a message</h2>
+            <h2 className="text-2xl font-display text-white mb-1">Send us a message</h2>
             <p className="text-white/70 mb-4">Fill out the form and our team will get back to you within 24 hours.</p>
             <ContactForm />
           </div>
 
           {/* Social & Contact Info */}
           <div className="lg:pl-6">
-            <h2 className="text-2xl font-bold text-white mb-1">Connect with us</h2>
+            <h2 className="text-2xl font-display text-white mb-1">Connect with us</h2>
             <p className="text-white/70 mb-4">Follow us on social media or reach out directly.</p>
             
             <div className="space-y-6">
@@ -366,7 +366,7 @@ const ContactPage = () => {
       {/* Global Presence Map */}
       <section className="w-full">
         <div className="max-w-7xl mx-auto px-6 text-center mb-8">
-          <h2 className="text-3xl font-bold text-white mb-4 text-center">Our Global Presence</h2>
+          <h2 className="text-3xl font-display text-white mb-4 text-center">Our Global Presence</h2>
           <p className="text-white/70 max-w-3xl mx-auto text-lg">
             With offices across eight countries, we're positioned to serve clients around the world with local expertise and global perspective. Hover over the red dots to explore our locations.
           </p>
