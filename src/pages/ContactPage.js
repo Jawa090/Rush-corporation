@@ -240,19 +240,18 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a132e] to-[#1a2b5f]">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-5 max-w-7xl mx-auto">
+      <header className="flex items-center justify-between px-4 py-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <Link to="/" aria-label="Rush home" className="flex items-center">
-            <img src="/logo1.png" alt="Rush" className="h-16 w-auto" />
-            
+            <img src="logo1.png" alt="Logo" className="h-16 w-auto" />
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-1">
-          <Link to="/" className="px-4 py-2 text-sm font-medium tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10">Home</Link>
-          <Link to="/brands" className="px-4 py-2 text-sm font-medium tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10">Group brands</Link>
-          <Link to="/about" className="px-4 py-2 text-sm font-medium tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10">About us</Link>
-          <Link to="/investors" className="px-4 py-2 text-sm font-medium tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10">Investor Center</Link>
-          <span className="ml-2 px-4 py-2 text-sm font-medium tracking-wide text-white rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 shadow-md">Contact us</span>
+        <nav className="hidden md:flex items-center gap-2">
+          <Link to="/" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Home</Link>
+          <Link to="/brands" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Group brands</Link>
+          <Link to="/about" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">About us</Link>
+          <Link to="/investors" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Investor Center</Link>
+          <Link to="/contact" className="ml-1 px-4 py-2 text-sm font-semibold tracking-wide text-white rounded-md bg-white/10 hover:bg-white/20 transition-colors">Contact us</Link>
         </nav>
       </header>
 
@@ -287,76 +286,58 @@ const ContactPage = () => {
           <div className="lg:pl-6">
             <h2 className="text-2xl font-display text-white mb-1">Connect with us</h2>
             <p className="text-white/70 mb-4">Follow us on social media or reach out directly.</p>
-            
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-white font-semibold mb-3 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
-                  </svg>
-                  Follow Rush
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {/* Social Card */}
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-2 flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
+                  Follow
                 </h3>
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-2">
                   {[
-                    { name: 'YouTube', icon: 'M23.5 6.2c-.3-1.2-1.2-2.1-2.4-2.4C19 3.3 12 3.3 12 3.3s-7 0-9.1.5C1.7 4.1.8 5 .5 6.2.1 8.3.1 12 .1 12s0 3.7.4 5.8c.3 1.2 1.2 2.1 2.4 2.4 2.1.5 9.1.5 9.1.5s7 0 9.1-.5c1.2-.3 2.1-1.2 2.4-2.4.4-2.1.4-5.8.4-5.8s0-3.7-.4-5.8zM9.8 15.5V8.5l6.1 3.5-6.1 3.5z' },
-                    { name: 'LinkedIn', icon: 'M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8 8.5h3.8v2h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.11V23h-4v-5.9c0-1.41-.03-3.22-1.96-3.22-1.96 0-2.26 1.53-2.26 3.11V23h-4V8.5z' },
-                    { name: 'Instagram', icon: 'M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5zm5.25-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z' },
-                    { name: 'Twitter', icon: 'M18 2h3l-7.5 8.6L22 22h-6.8l-4.3-6-4.9 6H2l8.2-9.5L2 2h6.9l4 5.6L18 2z' }
+                    { name: 'YouTube', href: '#', icon: 'M23.5 6.2c-.3-1.2-1.2-2.1-2.4-2.4C19 3.3 12 3.3 12 3.3s-7 0-9.1.5C1.7 4.1.8 5 .5 6.2.1 8.3.1 12 .1 12s0 3.7.4 5.8c.3 1.2 1.2 2.1 2.4 2.4 2.1.5 9.1.5 9.1.5s7 0 9.1-.5c1.2-.3 2.1-1.2 2.4-2.4.4-2.1.4-5.8.4-5.8zM9.8 15.5V8.5l6.1 3.5-6.1 3.5z' },
+                    { name: 'LinkedIn', href: '#', icon: 'M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8 8.5h3.8v2h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.11V23h-4v-5.9c0-1.41-.03-3.22-1.96-3.22-1.96 0-2.26 1.53-2.26 3.11V23h-4V8.5z' },
+                    { name: 'Instagram', href: '#', icon: 'M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5zm5.25-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z' },
+                    { name: 'Twitter', href: '#', icon: 'M18 2h3l-7.5 8.6L22 22h-6.8l-4.3-6-4.9 6H2l8.2-9.5L2 2h6.9l4 5.6L18 2z' }
                   ].map((social, index) => (
-                    <a 
-                      key={index}
-                      href="#" 
-                      className="p-3 rounded-xl bg-white/10 hover:bg-white/15 transition-all duration-300 group flex items-center justify-center relative"
-                      aria-label={social.name}
-                    >
-                      <svg className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
-                        <path d={social.icon} />
-                    </svg>
-                      <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                        {social.name}
-                      </span>
+                    <a key={index} href={social.href} className="p-3 rounded-xl bg-white/10 hover:bg-white/15 transition-all duration-300 group flex items-center justify-center relative" aria-label={social.name}>
+                      <svg className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" aria-hidden="true"><path d={social.icon} /></svg>
+                      <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">{social.name}</span>
                     </a>
                   ))}
                 </div>
               </div>
-              
-              <div>
-                <h3 className="text-white font-semibold mb-3 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                    </svg>
-                  General inquiries
+
+              {/* Contact Card */}
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-2 flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                  Contact
                 </h3>
                 <div className="space-y-2">
-                  <p className="text-white/80 flex items-center">
-                    <svg className="w-4 h-4 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                    </svg>
+                  <a href="mailto:hello@rush.com" className="text-white/90 text-sm flex items-center hover:text-white">
+                    <svg className="w-4 h-4 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                     hello@rush.com
-                  </p>
-                  <p className="text-white/80 flex items-center">
-                    <svg className="w-4 h-4 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                    </svg>
+                  </a>
+                  <a href="tel:+15551234567" className="text-white/90 text-sm flex items-center hover:text-white">
+                    <svg className="w-4 h-4 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
                     +1 (555) 123-4567
-                  </p>
+                  </a>
                 </div>
               </div>
-              
-              <div>
-                <h3 className="text-white font-semibold mb-3 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
-                  </svg>
-                  Headquarters
+
+              {/* HQ Card */}
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:col-span-2">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-2 flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path></svg>
+                  HQ
                 </h3>
-                <p className="text-white/80">
+                <address className="not-italic text-white/80 leading-6 text-sm">
                   123 Innovation Boulevard<br />
                   San Francisco, CA 94107<br />
                   United States
-                </p>
+                </address>
               </div>
             </div>
           </div>

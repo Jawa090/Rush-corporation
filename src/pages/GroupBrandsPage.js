@@ -5,7 +5,7 @@ const brands = [
   { 
     key: 'rush', 
     name: 'Rush Corporation', 
-    logo: '/R.png', 
+    logo: 'R.png', 
     about: 'Rush is the global platform behind a family of brands delivering trusted software and technology experiences. We combine design, engineering, and data to build products that feel fast, simple, and joyful. Our mission is to empower businesses worldwide with innovative solutions that drive growth and transformation.',
     tagline: 'Global Technology Platform',
     bgColor: 'bg-gradient-to-br from-blue-600/20 to-purple-600/20'
@@ -13,7 +13,7 @@ const brands = [
   { 
     key: 'bitwords', 
     name: 'Bitwords', 
-    logo: '/logo9.png', 
+    logo: 'logo9.png', 
     about: 'Bitwords is a global platform connecting professionals from various countries for collaborative work opportunities. We specialize in digital content creation, growth marketing strategies, and amplifying brand stories across diverse markets and cultures. Our network spans across 50+ countries, enabling truly global collaboration.',
     tagline: 'Global Digital Collaboration',
     bgColor: 'bg-gradient-to-br from-teal-500/20 to-emerald-600/20',
@@ -22,7 +22,7 @@ const brands = [
   { 
     key: 'fusioncortex', 
     name: 'Fusion Cortex', 
-    logo: '/logo7.png', 
+    logo: 'logo7.png', 
     about: 'Fusion Cortex delivers cutting-edge software services and solutions to businesses worldwide. Our team of experts specializes in creating custom software, AI integration, cloud solutions, and digital transformation services that help organizations stay ahead in the rapidly evolving technology landscape.',
     tagline: 'Software Service Excellence',
     bgColor: 'bg-gradient-to-br from-indigo-600/20 to-blue-500/20',
@@ -31,7 +31,7 @@ const brands = [
   { 
     key: 'remoteseat', 
     name: 'Remote Seat', 
-    logo: '/logo5.png', 
+    logo: 'logo5.png', 
     about: 'Remote Seat provides comprehensive B2B services enabling seamless remote collaboration that feels in-person. Our platform allows teams to co-create, review, and ship projects from anywhere in the world. With advanced virtual workspace technology, we\'re redefining how businesses operate in a distributed work environment.',
     tagline: 'Virtual Workspace Solutions',
     bgColor: 'bg-gradient-to-br from-violet-600/20 to-purple-500/20',
@@ -40,7 +40,7 @@ const brands = [
   { 
     key: 'contractorlist', 
     name: 'Contractor List', 
-    logo: '/logo6.png', 
+    logo: 'logo6.png', 
     about: 'Contractor List is a worldwide platform revolutionizing how businesses find and hire skilled contractors. With verified professionals across 100+ categories, we make it effortless to browse, connect with, and hire top talent. Our secure payment system and rating platform ensure quality results every time.',
     tagline: 'Global Contractor Network',
     bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-600/20'
@@ -48,7 +48,7 @@ const brands = [
   { 
     key: 'paradise', 
     name: 'Paradise Estimating', 
-    logo: '/logo2.png', 
+    logo: 'logo2.png', 
     about: 'Paradise Estimating offers advanced estimating tools that help construction teams and builders plan projects with unparalleled accuracy and speed. Our software reduces estimation errors by 75% and cuts planning time in half, enabling construction professionals to bid confidently and win more projects.',
     tagline: 'Precision Estimating Tools',
     bgColor: 'bg-gradient-to-br from-amber-500/20 to-orange-500/20',
@@ -57,7 +57,7 @@ const brands = [
   { 
     key: 'estimatinghub', 
     name: 'EstimatingHub', 
-    logo: '/logo3.png', 
+    logo: 'logo3.png', 
     about: 'EstimatingHub is a collaborative platform that centralizes estimates, data, and approvals for teams of all sizes. Our intuitive dashboard provides real-time insights, version control, and seamless collaboration features that streamline the estimation process from concept to completion.',
     tagline: 'Centralized Estimation Platform',
     bgColor: 'bg-gradient-to-br from-cyan-500/20 to-teal-500/20',
@@ -66,7 +66,7 @@ const brands = [
   { 
     key: 'decxperts', 
     name: 'Decxperts', 
-    logo: '/logo4.png', 
+    logo: 'logo4.png', 
     about: 'Decxperts is a premier contractor services platform providing expert-led delivery and integration services. We connect organizations with vetted professionals across various industries, ensuring projects are completed with confidence and excellence. Our rigorous screening process guarantees top-tier talent for every project.',
     tagline: 'Expert Contractor Services',
     bgColor: 'bg-gradient-to-br from-sky-500/20 to-blue-600/20',
@@ -75,7 +75,7 @@ const brands = [
   { 
     key: 'reemotors', 
     name: '3RE Motors', 
-    logo: '/logo8.png', 
+    logo: 'logo8.png', 
     about: '3RE Motors is transforming the automotive industry with our innovative car purchasing and sales platform. We offer a seamless experience for buying and selling vehicles, with transparent pricing, virtual test drives, and doorstep delivery. Our AI-powered platform matches buyers with their perfect vehicle.',
     tagline: 'Next-Gen Automotive Solutions',
     bgColor: 'bg-gradient-to-br from-red-500/20 to-rose-600/20',
@@ -258,15 +258,15 @@ const GroupBrandsPage = () => {
       <header className="relative z-10 flex items-center justify-between px-4 py-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <Link to="/" aria-label="Rush home">
-            <img src="/logo1.png" alt="Rush" className="h-16 w-auto" />
+            <img src="logo1.png" alt="Logo" className="h-16 w-auto" />
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-1">
-          <Link to="/" className="px-4 py-2.5 text-base font-medium text-white/90 hover:text-white rounded-lg transition-colors hover:bg-white/10">Home</Link>
-          <span className="px-4 py-2.5 text-base font-medium text-white rounded-lg bg-white/10">Group brands</span>
-          <Link to="/about" className="px-4 py-2.5 text-base font-medium text-white/90 hover:text-white rounded-lg transition-colors hover:bg-white/10">About us</Link>
-          <Link to="/investors" className="px-4 py-2.5 text-base font-medium text-white/90 hover:text-white rounded-lg transition-colors hover:bg-white/10">Investor Center</Link>
-          <Link to="/contact" className="ml-2 px-5 py-2.5 text-base font-medium text-white rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition-all duration-300">Contact us</Link>
+        <nav className="hidden md:flex items-center gap-2">
+          <Link to="/" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Home</Link>
+          <Link to="/brands" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Group brands</Link>
+          <Link to="/about" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">About us</Link>
+          <Link to="/investors" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Investor Center</Link>
+          <Link to="/contact" className="ml-1 px-4 py-2 text-sm font-semibold tracking-wide text-white rounded-md bg-white/10 hover:bg-white/20 transition-colors">Contact us</Link>
         </nav>
       </header>
       
