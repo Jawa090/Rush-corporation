@@ -21,11 +21,11 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           {/* Left brand + nav */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-8 flex-wrap">
             <div className="flex items-center gap-3">
               <img src="/logo1.png" alt="Rush Group" className="h-7 w-auto drop-shadow" />
             </div>
-            <nav className="flex items-center gap-6">
+            <nav className="flex items-center gap-6 flex-wrap">
               <a href="#" className="hover:text-white transition-colors">Careers</a>
               <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

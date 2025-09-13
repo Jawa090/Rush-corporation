@@ -27,6 +27,8 @@ const AboutPage = () => {
           <Link to="/investors" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Investor Center</Link>
           <Link to="/contact" className="ml-1 px-4 py-2 text-sm font-semibold tracking-wide text-white rounded-md bg-white/10 hover:bg-white/20 transition-colors">Contact us</Link>
         </nav>
+        {/* Mobile menu button and sheet */}
+        <MobileMenu />
       </header>
 
       {/* Hero */}
@@ -111,6 +113,164 @@ const AboutPage = () => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <h3 className="text-white font-semibold text-xl font-sans">Together, better</h3>
             <p className="text-white/70 mt-2 leading-relaxed font-sans">We collaborate across disciplines and brands, sharing systems and learnings.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CEO Message Section */}
+      <section className="max-w-7xl mx-auto px-6 mt-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display text-white mb-4">
+            <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+              Leadership Vision
+            </span>
+          </h2>
+          <p className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
+            Hear from our visionary leaders about the future of technology and innovation at Rush Corporation.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Usman CH Message */}
+          <div className="group relative">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 hover:shadow-2xl hover:shadow-blue-500/10">
+              {/* Animated background elements */}
+              <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-gradient-to-br from-blue-500/15 to-cyan-600/15 blur-xl group-hover:from-blue-500/25 group-hover:to-cyan-600/25 transition-all duration-700"></div>
+              <div className="absolute -left-6 -bottom-6 h-28 w-28 rounded-full bg-gradient-to-tr from-blue-500/15 to-indigo-600/15 blur-xl group-hover:from-blue-500/25 group-hover:to-indigo-600/25 transition-all duration-700"></div>
+              
+              <div className="relative z-10">
+                {/* CEO Profile */}
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="relative h-20 w-20">
+                    <div className="rounded-full bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 p-[3px] group-hover:from-blue-500 group-hover:via-cyan-600 group-hover:to-blue-700 transition-all duration-500 h-full w-full">
+                      <div className="h-full w-full rounded-full overflow-hidden bg-[#0a132e] relative">
+                        <img
+                          src="/usman.png"
+                          alt="Usman CH"
+                          className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            const fallback = e.currentTarget.parentElement && e.currentTarget.parentElement.querySelector('.fallback');
+                            if (fallback) fallback.style.display = 'grid';
+                          }}
+                        />
+                        <div className="absolute inset-0 hidden fallback place-items-center text-white font-bold text-2xl">U</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-blue-300 transition-colors duration-300">Usman CH</h3>
+                    <p className="text-blue-400 text-lg font-medium">CEO & Co-Founder</p>
+                    <div className="flex gap-2 mt-2">
+                      <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-medium border border-blue-500/30">
+                        Visionary
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-medium border border-cyan-500/30">
+                        Innovation
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CEO Message */}
+                <blockquote className="text-white/90 text-lg leading-relaxed mb-6 italic">
+                  "At Rush, we believe technology should empower, not complicate. Our mission is to build platforms that feel magical yet effortless, connecting people and ideas across the globe. Every line of code we write, every design decision we make, is guided by one simple principle: make the complex beautifully simple."
+                </blockquote>
+                
+                <div className="text-white/70 text-sm">
+                  <p className="font-medium mb-2">Key Focus Areas:</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>• Strategic vision and company direction</li>
+                    <li>• Innovation and product development</li>
+                    <li>• Global expansion and partnerships</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Hafiz Sakif Message */}
+          <div className="group relative">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 hover:shadow-2xl hover:shadow-purple-500/10">
+              {/* Animated background elements */}
+              <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-gradient-to-br from-purple-500/15 to-pink-600/15 blur-xl group-hover:from-purple-500/25 group-hover:to-pink-600/25 transition-all duration-700"></div>
+              <div className="absolute -left-6 -bottom-6 h-28 w-28 rounded-full bg-gradient-to-tr from-purple-500/15 to-violet-600/15 blur-xl group-hover:from-purple-500/25 group-hover:to-violet-600/25 transition-all duration-700"></div>
+              
+              <div className="relative z-10">
+                {/* CEO Profile */}
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="relative h-20 w-20">
+                    <div className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 p-[3px] group-hover:from-purple-500 group-hover:via-pink-600 group-hover:to-purple-700 transition-all duration-500 h-full w-full">
+                      <div className="h-full w-full rounded-full overflow-hidden bg-[#0a132e] relative">
+                        <img
+                          src="/hafiz.png"
+                          alt="Hafiz Sakif"
+                          className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            const fallback = e.currentTarget.parentElement && e.currentTarget.parentElement.querySelector('.fallback');
+                            if (fallback) fallback.style.display = 'grid';
+                          }}
+                        />
+                        <div className="absolute inset-0 hidden fallback place-items-center text-white font-bold text-2xl">H</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-purple-300 transition-colors duration-300">Hafiz Sakif</h3>
+                    <p className="text-purple-400 text-lg font-medium">CEO & Co-Founder</p>
+                    <div className="flex gap-2 mt-2">
+                      <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium border border-purple-500/30">
+                        Strategy
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-medium border border-pink-500/30">
+                        Growth
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CEO Message */}
+                <blockquote className="text-white/90 text-lg leading-relaxed mb-6 italic">
+                  "Our strength lies in our people and our commitment to excellence. We're not just building software; we're crafting experiences that transform how businesses operate and how people connect. The future belongs to those who can seamlessly blend innovation with reliability, and that's exactly what we're delivering at Rush."
+                </blockquote>
+                
+                <div className="text-white/70 text-sm">
+                  <p className="font-medium mb-2">Key Focus Areas:</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>• Operational excellence and execution</li>
+                    <li>• Team development and culture</li>
+                    <li>• Market expansion and customer success</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Shared Vision Statement */}
+        <div className="mt-16 text-center">
+          <div className="max-w-4xl mx-auto p-8 rounded-3xl border border-white/10 bg-gradient-to-r from-white/5 via-white/8 to-white/5 backdrop-blur-sm">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                Our Shared Vision
+              </span>
+            </h3>
+            <p className="text-white/90 text-lg leading-relaxed mb-6">
+              "Together, we envision a world where technology serves humanity with grace and purpose. 
+              Rush Corporation stands at the intersection of innovation and impact, building the digital 
+              infrastructure that will power the next generation of global businesses."
+            </p>
+            <div className="flex justify-center gap-8 text-sm text-white/70">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                <span>Usman CH, CEO & Co-Founder</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                <span>Hafiz Sakif, CEO & Co-Founder</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -230,3 +390,41 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+function MobileMenu(){
+  const [open, setOpen] = React.useState(false);
+  return (
+    <>
+      <button
+        aria-label="Open menu"
+        className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+        onClick={() => setOpen(v=>!v)}
+      >
+        <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      {open && (
+        <div className="md:hidden fixed inset-0 z-50 bg-[#0a132e]/95 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <img src="/logo1.png" alt="Logo" className="h-10 w-auto" />
+            <button
+              aria-label="Close menu"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+              onClick={() => setOpen(false)}
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <nav className="px-6 space-y-2">
+            <Link onClick={() => setOpen(false)} to="/" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Home</Link>
+            <Link onClick={() => setOpen(false)} to="/brands" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Group brands</Link>
+            <Link onClick={() => setOpen(false)} to="/about" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">About us</Link>
+            <Link onClick={() => setOpen(false)} to="/investors" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Investor Center</Link>
+            <Link onClick={() => setOpen(false)} to="/contact" className="block px-4 py-3 rounded-lg text-white bg-white/10 hover:bg:white/20">Contact us</Link>
+          </nav>
+        </div>
+      )}
+    </>
+  );
+}

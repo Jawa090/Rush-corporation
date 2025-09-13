@@ -16,12 +16,12 @@ const ProfessionalLogoShowcase = () => {
   );
 
   return (
-    <section className="relative py-8 bg-gradient-to-b from-[#0a132e] to-[#1a2b5f] overflow-hidden">
+    <section className="relative py-6 md:py-8 bg-gradient-to-b from-[#0a132e] to-[#1a2b5f] overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_70%)] opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-6">
-          <div className="flex justify-center mb-4">
+        <div className="text-center mb-4 md:mb-6">
+          <div className="flex justify-center mb-3">
             <div className="relative">
               <img 
                 src="/R.png" 
@@ -31,16 +31,16 @@ const ProfessionalLogoShowcase = () => {
             </div>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-display text-white mb-2">
+          <h2 className="text-2xl md:text-3xl font-display text-white mb-1.5">
             Trusted by Industry Leaders
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-3"></div>
-          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-2"></div>
+          <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
             Partnering with innovative brands to shape the future of technology and business.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {logos.map((logo, index) => (
             <div 
               key={index}

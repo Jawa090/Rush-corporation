@@ -7,7 +7,7 @@ const AboutRush = () => {
       <section className="relative py-6 md:py-10">
         <div className="absolute inset-0 bg-[#e8f1ff]" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our company</h2>
               <p className="text-[#0a132e]/80 leading-normal mb-2">
@@ -24,8 +24,8 @@ const AboutRush = () => {
                 <span aria-hidden>→</span>
               </Link>
             </div>
-            <div className="relative py-3 md:py-6 flex md:justify-end">
-              <img src="/pic1.png" alt="Rush offices" className="w-[85%] md:w-[70%] h-auto shadow-xl" />
+            <div className="relative py-3 md:py-6 flex justify-center md:justify-end">
+              <img src="/pic1.png" alt="Rush offices" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-xl" />
             </div>
           </div>
         </div>
@@ -34,9 +34,9 @@ const AboutRush = () => {
       <section className="relative py-6 md:py-10">
         <div className="absolute inset-0 bg-white" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div className="relative py-3 md:py-6 flex md:justify-start">
-              <img src="/pic2.png" alt="Rush people" className="w-[85%] md:w-[70%] h-auto shadow-lg" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div className="relative py-3 md:py-6 flex justify-center md:justify-start">
+              <img src="/pic2.png" alt="Rush people" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our people</h2>
@@ -62,7 +62,7 @@ const AboutRush = () => {
       <section className="relative py-6 md:py-10">
         <div className="absolute inset-0 bg-[#f7f9ff]" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             {/* Text on the left */}
             <div>
               <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our brands</h2>
@@ -82,8 +82,8 @@ const AboutRush = () => {
             </div>
 
             {/* Image on the right */}
-            <div className="relative py-3 md:py-6 flex md:justify-end">
-              <img src="/pic3.png" alt="Rush brands" className="w-[85%] md:w-[70%] h-auto shadow-lg" />
+            <div className="relative py-3 md:py-6 flex justify-center md:justify-end">
+              <img src="/pic3.png" alt="Rush brands" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
             </div>
           </div>
         </div>

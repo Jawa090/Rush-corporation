@@ -243,7 +243,7 @@ const ContactPage = () => {
       <header className="flex items-center justify-between px-4 py-4 max-w-6xl mx-auto">
         <div className="flex items-center">
           <Link to="/" aria-label="Rush home" className="flex items-center">
-            <img src="logo1.png" alt="Logo" className="h-16 w-auto" />
+            <img src="/logo1.png" alt="Logo" className="h-16 w-auto" />
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-2">
@@ -253,6 +253,7 @@ const ContactPage = () => {
           <Link to="/investors" className="px-3 py-2 text-sm font-semibold tracking-wide text-white/90 hover:text-white rounded-md transition-colors hover:bg-white/10 hover:underline underline-offset-8 decoration-white/30">Investor Center</Link>
           <Link to="/contact" className="ml-1 px-4 py-2 text-sm font-semibold tracking-wide text-white rounded-md bg-white/10 hover:bg-white/20 transition-colors">Contact us</Link>
         </nav>
+        <MobileMenu />
       </header>
 
       {/* Hero */}
@@ -362,3 +363,41 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+function MobileMenu(){
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        aria-label="Open menu"
+        className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+        onClick={() => setOpen(v=>!v)}
+      >
+        <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      {open && (
+        <div className="md:hidden fixed inset-0 z-50 bg-[#0a132e]/95 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <img src="/logo1.png" alt="Logo" className="h-10 w-auto" />
+            <button
+              aria-label="Close menu"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+              onClick={() => setOpen(false)}
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <nav className="px-6 space-y-2">
+            <Link onClick={() => setOpen(false)} to="/" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Home</Link>
+            <Link onClick={() => setOpen(false)} to="/brands" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Group brands</Link>
+            <Link onClick={() => setOpen(false)} to="/about" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">About us</Link>
+            <Link onClick={() => setOpen(false)} to="/investors" className="block px-4 py-3 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Investor Center</Link>
+            <Link onClick={() => setOpen(false)} to="/contact" className="block px-4 py-3 rounded-lg text-white bg-white/10 hover:bg-white/20">Contact us</Link>
+          </nav>
+        </div>
+      )}
+    </>
+  );
+}
