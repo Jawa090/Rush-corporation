@@ -32,11 +32,11 @@ const ProfessionalLogoShowcase = () => {
           </div>
           
           <h2 className="text-2xl md:text-3xl font-display text-white mb-1.5">
-            Trusted by Industry Leaders
+            A family of <span className="text-[#477CFF]">B2B</span> and <span className="text-[#477CFF]">B2C</span> brands
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-2"></div>
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
-            Partnering with innovative brands to shape the future of technology and business.
+            Market leaders. Award winners. Digital protection pioneers. Our family of consumer brands are trusted by millions of customers, all over the world.
           </p>
         </div>
 

@@ -10,14 +10,14 @@ const AboutRush = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our company</h2>
-              <p className="text-[#0a132e]/80 leading-normal mb-2">
+              <p className="text-[#0a132e]/80 leading-relaxed mb-2">
                 Rush is a global technology group building platforms and products that bring people closer to the magic of innovation. We connect brands, creators, and customers through delightful digital experiences.
               </p>
-              <p className="text-[#0a132e]/80 leading-normal mb-2">
+              <p className="text-[#0a132e]/80 leading-relaxed mb-2">
                 With a growing portfolio of companies, we combine design, engineering, and data to deliver solutions used around the world. Our teams experiment, learn fast, and scale what works.
               </p>
-              <p className="text-[#0a132e]/80 leading-normal">
-                From concept to launch, Rush powers the user journey—secure, performant, and human‑centered.
+              <p className="text-[#0a132e]/80 leading-relaxed">
+                From concept to launch, Rush powers the user journey—secure, performant, and human‑centered. We measure success by customer outcomes and sustained, long‑term impact.
               </p>
               <Link to="/about" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
                 Learn more about Rush
@@ -25,29 +25,29 @@ const AboutRush = () => {
               </Link>
             </div>
             <div className="relative py-3 md:py-6 flex justify-center md:justify-end">
-              <img src="/pic1.png" alt="Rush offices" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-xl" />
+              <img src="/pic1.jpg" alt="Rush offices" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-xl" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative py-6 md:py-10">
+      <section className="relative py-5 md:py-8">
         <div className="absolute inset-0 bg-white" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div className="relative py-3 md:py-6 flex justify-center md:justify-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+            <div className="relative py-2 md:py-4 flex justify-center md:justify-start">
               <img src="/pic2.png" alt="Rush people" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our people</h2>
-              <p className="text-[#0a132e]/80 leading-normal mb-2">
+              <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-2">Our people</h2>
+              <p className="text-[#0a132e]/80 leading-relaxed mb-2">
                 People are at the heart of Rush. We’re a community of designers, engineers, storytellers, and operators who care deeply about craft and impact.
               </p>
-              <p className="text-[#0a132e]/80 leading-normal mb-2">
+              <p className="text-[#0a132e]/80 leading-relaxed mb-2">
                 We celebrate diverse perspectives, share what we learn, and support each other to do the best work of our careers.
               </p>
-              <p className="text-[#0a132e]/80 leading-normal">
-                Together, we build products millions love—while building a culture where everyone can thrive.
+              <p className="text-[#0a132e]/80 leading-relaxed">
+                Together, we build products millions love—while building a culture where everyone can thrive. We invest in mentorship and growth so people can do the best work of their lives.
               </p>
               <Link to="/about#team" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
                 Meet the team
@@ -59,21 +59,21 @@ const AboutRush = () => {
       </section>
 
       {/* Our Brands section */}
-      <section className="relative py-6 md:py-10">
+      <section className="relative py-5 md:py-8">
         <div className="absolute inset-0 bg-[#f7f9ff]" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             {/* Text on the left */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-3">Our brands</h2>
-              <p className="text-[#0a132e]/80 leading-normal mb-2">
+              <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-2">Our brands</h2>
+              <p className="text-[#0a132e]/80 leading-relaxed mb-2">
                 Rush empowers a family of brands across software, media, and commerce. Each brand is built to serve a focused community with products that feel fast, simple, and joyful.
               </p>
-              <p className="text-[#0a132e]/80 leading-normal mb-2">
+              <p className="text-[#0a132e]/80 leading-relaxed mb-2">
                 Together, our brands share a platform of technology, design systems, and values—so we can move quickly and deliver consistent quality at scale.
               </p>
-              <p className="text-[#0a132e]/80 leading-normal">
-                From early ideas to global launches, Rush supports the full journey—so teams can focus on what matters most: delighting users.
+              <p className="text-[#0a132e]/80 leading-relaxed">
+                From early ideas to global launches, Rush supports the full journey—so teams can focus on what matters most: delighting users. We aim for clarity, reliability, and delight in every product.
               </p>
               <Link to="/brands" className="inline-flex items-center gap-2 mt-3 text-[#0a132e] font-semibold hover:underline">
                 Explore our brands
@@ -82,8 +82,8 @@ const AboutRush = () => {
             </div>
 
             {/* Image on the right */}
-            <div className="relative py-3 md:py-6 flex justify-center md:justify-end">
-              <img src="/pic3.png" alt="Rush brands" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
+            <div className="relative py-2 md:py-4 flex justify-center md:justify-end">
+              <img src="/pic3.jpg" alt="Rush brands" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
             </div>
           </div>
         </div>
