@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GlobalTeamScroller from '../components/GlobalTeamScroller';
 
 const teammates = [
-  { id: 1, name: 'Usman CH', role: 'CEO & Founder', initials: 'U', photo: '/usman.png' },
-  { id: 2, name: 'Hafiz Sakif', role: 'CEO & Founder', initials: 'H', photo: '/hafiz.png' },
-  { id: 3, name: 'Hassan Sakif', role: 'Product Manager', initials: 'HS', photo: '/hassan.png' },
-  { id: 4, name: 'Rayan CH', role: 'Marketing Head', initials: 'R', photo: '/Rayan.png' },
+  { id: 1, name: 'Usman CHAUDHARY', role: 'CEO & Founder', initials: 'U', photo: '/usman.png', linkedin: '' },
+  { id: 2, name: 'Hafiz Sakif', role: 'CEO & Founder', initials: 'H', photo: '/hafiz.png', linkedin: '' },
 ];
 
 const AboutPage = () => {
@@ -278,7 +277,7 @@ const AboutPage = () => {
       {/* Team - Beautiful Enhanced Section */}
       <section className="max-w-7xl mx-auto px-6 mt-20">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-display text-white mb-4">Meet Our Leadership Team</h2>
+          <h2 className="text-3xl md:text-4xl font-display text-white mb-4">Executive Leadership</h2>
           <p className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
             Visionary leaders driving innovation and growth across our portfolio of technology companies.
           </p>
@@ -288,7 +287,7 @@ const AboutPage = () => {
           {teammates.map((t, index) => (
             <div 
               key={t.id} 
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.03] hover:border-white/25 hover:shadow-2xl hover:shadow-blue-500/10"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.03] hover:border-white/25 hover:shadow-2xl hover:shadow-blue-500/10 w-80 md:w-96"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Animated background elements */}
@@ -374,6 +373,9 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Global Team Scroller */}
+      <GlobalTeamScroller />
 
       {/* CTA */}
       <section className="relative py-12 mt-12" style={{ backgroundColor: '#e8f1ff' }}>
