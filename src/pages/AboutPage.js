@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import GlobalTeamScroller from '../components/GlobalTeamScroller';
 
 const teammates = [
-  { id: 1, name: 'Usman CHAUDHARY', role: 'CEO & Founder', initials: 'U', photo: '/usman.png', linkedin: '' },
-  { id: 2, name: 'Hafiz Sakif', role: 'CEO & Founder', initials: 'H', photo: '/hafiz.png', linkedin: '' },
+  { id: 1, name: 'Usman CHAUDHARY', role: 'Founder & CEO', initials: 'U', photo: '/usman.png', linkedin: '' },
+  { id: 2, name: 'Hafiz Saqif', role: 'Founder & CEO', initials: 'H', photo: '/hafiz.png', linkedin: '' },
 ];
 
 const AboutPage = () => {
