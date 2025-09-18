@@ -4,7 +4,7 @@ import GlobalTeamScroller from '../components/GlobalTeamScroller';
 
 const teammates = [
   { id: 1, name: 'Usman CHAUDHARY', role: 'Founder & CEO', initials: 'U', photo: '/usman.png', linkedin: '' },
-  { id: 2, name: 'Hafiz Saqif', role: 'Founder & CEO', initials: 'H', photo: '/hafiz.png', linkedin: '' },
+  { id: 2, name: 'Hafiz Saqif', role: 'Founder & CEO', initials: 'H', photo: '/hafiz.jpg', linkedin: '' },
 ];
 
 const AboutPage = () => {
@@ -129,10 +129,10 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Usman CH Message */}
           <div className="group relative">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 hover:shadow-2xl hover:shadow-blue-500/10">
+            <div className="relative h-full min-h-[460px] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 hover:shadow-2xl hover:shadow-blue-500/10">
               {/* Animated background elements */}
               <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-gradient-to-br from-blue-500/15 to-cyan-600/15 blur-xl group-hover:from-blue-500/25 group-hover:to-cyan-600/25 transition-all duration-700"></div>
               <div className="absolute -left-6 -bottom-6 h-28 w-28 rounded-full bg-gradient-to-tr from-blue-500/15 to-indigo-600/15 blur-xl group-hover:from-blue-500/25 group-hover:to-indigo-600/25 transition-all duration-700"></div>
@@ -145,7 +145,7 @@ const AboutPage = () => {
                       <div className="h-full w-full rounded-full overflow-hidden bg-[#0a132e] relative">
                         <img
                           src="/usman.png"
-                          alt="Usman CH"
+                          alt="Usman CHAUDHARY"
                           className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
@@ -158,8 +158,8 @@ const AboutPage = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-blue-300 transition-colors duration-300">Usman CH</h3>
-                    <p className="text-blue-400 text-lg font-medium">CEO & Co-Founder</p>
+                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-blue-300 transition-colors duration-300">Usman CHAUDHARY</h3>
+                    <p className="text-blue-400 text-lg font-medium">Co-Founder & CEO</p>
                     <div className="flex gap-2 mt-2">
                       <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-medium border border-blue-500/30">
                         Visionary
@@ -190,7 +190,7 @@ const AboutPage = () => {
 
           {/* Hafiz Sakif Message */}
           <div className="group relative">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 hover:shadow-2xl hover:shadow-purple-500/10">
+            <div className="relative h-full min-h-[460px] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 via-white/5 to-white/[0.02] p-8 transition-all duration-500 hover:scale-[1.02] hover:border-white/25 hover:shadow-2xl hover:shadow-purple-500/10">
               {/* Animated background elements */}
               <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-gradient-to-br from-purple-500/15 to-pink-600/15 blur-xl group-hover:from-purple-500/25 group-hover:to-pink-600/25 transition-all duration-700"></div>
               <div className="absolute -left-6 -bottom-6 h-28 w-28 rounded-full bg-gradient-to-tr from-purple-500/15 to-violet-600/15 blur-xl group-hover:from-purple-500/25 group-hover:to-violet-600/25 transition-all duration-700"></div>
@@ -202,8 +202,8 @@ const AboutPage = () => {
                     <div className="rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 p-[3px] group-hover:from-purple-500 group-hover:via-pink-600 group-hover:to-purple-700 transition-all duration-500 h-full w-full">
                       <div className="h-full w-full rounded-full overflow-hidden bg-[#0a132e] relative">
                         <img
-                          src="/hafiz.png"
-                          alt="Hafiz Sakif"
+                          src="/hafiz.jpg"
+                          alt="Hafiz Saqif"
                           className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
@@ -216,8 +216,8 @@ const AboutPage = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-purple-300 transition-colors duration-300">Hafiz Sakif</h3>
-                    <p className="text-purple-400 text-lg font-medium">CEO & Co-Founder</p>
+                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-purple-300 transition-colors duration-300">Hafiz Saqif</h3>
+                    <p className="text-purple-400 text-lg font-medium">Co-Founder & CEO</p>
                     <div className="flex gap-2 mt-2">
                       <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium border border-purple-500/30">
                         Strategy
@@ -231,15 +231,15 @@ const AboutPage = () => {
 
                 {/* CEO Message */}
                 <blockquote className="text-white/90 text-lg leading-relaxed mb-6 italic">
-                  "Our strength lies in our people and our commitment to excellence. We're not just building software; we're crafting experiences that transform how businesses operate and how people connect. The future belongs to those who can seamlessly blend innovation with reliability, and that's exactly what we're delivering at Rush."
+                  "Our greatest asset is our team and unwavering dedication to quality. At Rush, we're not simply creating software; through AI-driven innovation, we're shaping experiences that redefine business operations and human connections. The future favours those who master the harmony of AI-powered innovation and dependable execution; this is the promise we uphold every day."
                 </blockquote>
                 
                 <div className="text-white/70 text-sm">
                   <p className="font-medium mb-2">Key Focus Areas:</p>
                   <ul className="space-y-1 text-sm">
-                    <li>• Operational excellence and execution</li>
-                    <li>• Team development and culture</li>
-                    <li>• Market expansion and customer success</li>
+                    <li>• Excellence in operations and flawless execution</li>
+                    <li>• Cultivating a strong, vibrant team culture</li>
+                    <li>• Expanding market reach and ensuring customer success</li>
                   </ul>
                 </div>
               </div>

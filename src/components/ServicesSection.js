@@ -13,10 +13,10 @@ const Item = ({ icon, title, desc }) => (
 
 const ServicesSection = () => {
   return (
-    <section className="relative py-12 bg-white">
+    <section className="relative py-12" style={{ backgroundColor: '#f7f9ff' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Services We Offer</h2>
-        <p className="text-slate-600 max-w-3xl mb-8">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0a132e] tracking-tight mb-2">Services We Offer</h2>
+        <p className="text-[#0a132e]/80 max-w-3xl mb-8">
           We offer a comprehensive range of services that help organizations leverage digital technologies to enhance business
           processes and improve customer experience.
         </p>
@@ -28,8 +28,8 @@ const ServicesSection = () => {
               <div className="mx-auto mb-3 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#477CFF]/15 text-[#477CFF]">
                 <FiMonitor className="w-6 h-6" />
               </div>
-              <div className="font-semibold text-slate-900">Digital Services</div>
-              <div className="text-xs text-slate-600 mt-1">Modern solutions engineered for speed, security, and delightful user experiences.</div>
+              <div className="font-semibold text-[#0a132e]">Digital Services</div>
+              <div className="text-xs text-[#0a132e]/70 mt-1">Modern solutions engineered for speed, security, and delightful user experiences.</div>
             </div>
           </div>
 
@@ -40,7 +40,7 @@ const ServicesSection = () => {
             <Item icon={<FiSmartphone className="w-4 h-4" />} title="Mobile App Development" desc="iOS & Android apps that delight customers." />
             <Item icon={<FiBox className="w-4 h-4" />} title="Enterprise Mobility" desc="Secure device management and mobile strategy." />
             <Item icon={<FiLayers className="w-4 h-4" />} title="Digital UI/UX" desc="Personalized experiences across multiple channels." />
-            <Item icon={<FiRefreshCcw className="w-4 h-4" />} title="Application Modernization" desc="Cloud‑ready refactor and migration of legacy apps." />
+            <Item icon={<FiRefreshCcw className="w-4 h-4" />} title="Application Modernization" desc="Cloud-ready refactor and migration of legacy apps." />
             <Item icon={<FiRepeat className="w-4 h-4" />} title="Process Automation" desc="RPA and workflow automation for efficiency." />
             <Item icon={<FiTrendingUp className="w-4 h-4" />} title="Agile Transformation" desc="Adopt agile culture, tools, and practices." />
             <Item icon={<FiCloud className="w-4 h-4" />} title="Cloud Solutions" desc="Cloud strategy, migration, and cost optimization." />

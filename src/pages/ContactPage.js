@@ -32,21 +32,21 @@ const offices = [
   },
   {
     id: 4,
-    city: 'Australia',
+    city: 'North Sydney',
     country: 'Australia',
-    address: '869 Bay Ridge Avenue Brooklyn NY 11220',
-    phone: '+1 917 774 8864',
+    address: 'Suite 3A/74, Level 14, 275 Alfred St North Sydney, NSW 2060, Australia',
+    phone: '+61 2 0000 0000',
     email: 'info@rushcorporation.com',
-    mapUrl: 'https://www.google.com/maps?q=869%20Bay%20Ridge%20Avenue%20Brooklyn%20NY%2011220,%20Australia&output=embed'
+    mapUrl: 'https://www.google.com/maps?q=275%20Alfred%20St%20North%20Sydney%20NSW%202060%20Australia&output=embed'
   },
   {
     id: 5,
-    city: 'France',
-    country: 'France',
-    address: '869 Bay Ridge Avenue Brooklyn NY 11220',
-    phone: '+1 917 774 8864',
+    city: 'London',
+    country: 'United Kingdom',
+    address: '20 Bushey Road, SW20 8EE',
+    phone: '+447447713799',
     email: 'info@rushcorporation.com',
-    mapUrl: 'https://www.google.com/maps?q=869%20Bay%20Ridge%20Avenue%20Brooklyn%20NY%2011220,%20France&output=embed'
+    mapUrl: 'https://www.google.com/maps?q=20%20Bushey%20Road%20SW20%208EE%20London&output=embed'
   },
   {
     id: 6,
@@ -59,21 +59,21 @@ const offices = [
   },
   {
     id: 7,
-    city: 'Turkey',
+    city: 'Istanbul',
     country: 'Turkey',
-    address: '869 Bay Ridge Avenue Brooklyn NY 11220',
-    phone: '+1 917 774 8864',
+    address: 'B 1 Block, Daire 22, Collet Avcilar, Fruzkoy Blvd, Avcilar, Istanbul, Turkey',
+    phone: '+90 000 000 0000',
     email: 'info@rushcorporation.com',
-    mapUrl: 'https://www.google.com/maps?q=869%20Bay%20Ridge%20Avenue%20Brooklyn%20NY%2011220,%20Turkey&output=embed'
+    mapUrl: 'https://www.google.com/maps?q=Fruzkoy%20Blvd%20Avcilar%20Istanbul%20Turkey&output=embed'
   },
   {
     id: 8,
-    city: 'United Arab Emirates',
+    city: 'Sharjah',
     country: 'United Arab Emirates',
-    address: 'Nr 31 Johar Town Lahore',
-    phone: '+92 348 589 6893',
+    address: 'Office No 312, Muhammad Al Mulla Tower, 8 AL-Etihad Street, Sharjah, UAE',
+    phone: '+971 00 000 0000',
     email: 'info@rushcorporation.com',
-    mapUrl: 'https://www.google.com/maps?q=Nr%2031%20Johar%20Town%20Lahore,%20United%20Arab%20Emirates&output=embed'
+    mapUrl: 'https://www.google.com/maps?q=Muhammad%20Al%20Mulla%20Tower%208%20Al-Etihad%20Street%20Sharjah&output=embed'
   },
   {
     id: 9,
@@ -335,9 +335,9 @@ const ContactPage = () => {
                   HQ
                 </h3>
                 <address className="not-italic text-white/80 leading-6 text-sm">
-                  123 Innovation Boulevard<br />
-                  San Francisco, CA 94107<br />
-                  United States
+                  5900 Balcones Drive, STE 100<br />
+                  Austin, TX 78731<br />
+                  USA
                 </address>
               </div>
             </div>

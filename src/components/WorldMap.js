@@ -47,7 +47,7 @@ const WorldMap = () => {
       x: 82,
       y: 72,
       details: {
-        address: '869 Bay Ridge Avenue Brooklyn NY 11220',
+        address: 'Suite 3A/74, Level 14, 275 Alfred St North Sydney, NSW 2060, Australia',
         phone: '+1 917 774 8864',
         email: 'info@rushcorporation.com'
       }
@@ -71,8 +71,8 @@ const WorldMap = () => {
       x: 46,
       y: 26,
       details: {
-        address: '869 Bay Ridge Avenue Brooklyn NY 11220',
-        phone: '+1 917 774 8864',
+        address: '20 Bushey Road, SW20 8EE',
+        phone: '+447447713799',
         email: 'info@rushcorporation.com'
       }
     },
@@ -90,12 +90,24 @@ const WorldMap = () => {
     },
     {
       id: 8,
-      name: 'Dubai',
+      name: 'Sharjah',
       country: 'UAE',
       x: 54,
       y: 42,
       details: {
-        address: '869 Bay Ridge Avenue Brooklyn NY 11220',
+        address: 'Office No 312, Muhammad Al Mulla Tower, 8 AL-Etihad Street, Sharjah, UAE',
+        phone: '+1 917 774 8864',
+        email: 'info@rushcorporation.com'
+      }
+    },
+    {
+      id: 9,
+      name: 'Istanbul',
+      country: 'Turkey',
+      x: 52,
+      y: 34,
+      details: {
+        address: 'B 1 Block, Daire 22, Collet Avcilar, Fruzkoy Blvd, Avcilar, Istanbul, Turkey',
         phone: '+1 917 774 8864',
         email: 'info@rushcorporation.com'
       }

@@ -8,7 +8,7 @@ const HeroSlider = () => {
       title: 'SEEMLESS INTEGRATES\n& ENGAGE WITH AI',
       subtitle: '',
       description:
-        'Rush helps you seamlessly integrate and engage with AI. Our next‑generation platforms deliver governed insights and AI readiness on any cloud, at unparalleled scale',
+        'Rush helps you seamlessly integrate and engage with AI. Our next-generation platforms deliver governed insights and AI readiness on any cloud, at unparalleled scale',
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const HeroSlider = () => {
       title: 'POWERING DIGITAL\nTRANSFORMATION\nFOR FREEDOM',
       subtitle: '',
       description:
-        'The journey toward digital transformation entails harnessing its benefits — such as productivity improvement, cost reduction, and innovation — while navigating through the complexity and ambiguity brought about by the changes in the digital economy.',
+        'The journey toward digital transformation entails harnessing its benefits such as productivity improvement, cost reduction, and innovation  while navigating through the complexity and ambiguity brought about by the changes in the digital economy.',
     },
   ];
 
@@ -180,20 +180,20 @@ const HeroSlider = () => {
       </div>
 
       {/* Stats ribbon */}
-      <div className="relative z-20 pb-12">
+      <div className="relative z-20 pb-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl overflow-hidden shadow-2xl">
-            <div className="bg-[#4285F4] text-white p-8 text-center">
-              <div className="text-5xl font-bold mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>50+</div>
-              <div className="text-xs uppercase tracking-wider font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>AID CAMPAIGNS</div>
+            <div className="bg-[#4285F4] text-white py-3 px-5 md:py-4 md:px-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-0 leading-none" style={{ fontFamily: "'Poppins', sans-serif" }}>50+</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-wider font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>AID CAMPAIGNS</div>
             </div>
-            <div className="bg-gray-800 text-white p-8 text-center">
-              <div className="text-5xl font-bold mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>100K+</div>
-              <div className="text-xs uppercase tracking-wider font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>PEOPLE HELPED</div>
+            <div className="bg-gray-800 text-white py-3 px-5 md:py-4 md:px-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-0 leading-none" style={{ fontFamily: "'Poppins', sans-serif" }}>100K+</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-wider font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>PEOPLE HELPED</div>
             </div>
-            <div className="bg-[#4285F4] text-white p-8 text-center">
-              <div className="text-5xl font-bold mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>10K+</div>
-              <div className="text-xs uppercase tracking-wider font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>VOLUNTEERS<br />IN THE WORLD</div>
+            <div className="bg-[#4285F4] text-white py-3 px-5 md:py-4 md:px-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-0 leading-none" style={{ fontFamily: "'Poppins', sans-serif" }}>10K+</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-wider font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>VOLUNTEERS<br />IN THE WORLD</div>
             </div>
           </div>
         </div>

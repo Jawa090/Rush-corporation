@@ -13,11 +13,11 @@ const Row = ({ icon, title, desc }) => (
 
 const ManagementConsulting = () => {
   return (
-    <section className="relative py-12 bg-white">
+    <section className="relative py-12" style={{ backgroundColor: '#ffffff' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-extrabold tracking-wider text-slate-900 mb-1">MANAGEMENT CONSULTING</h2>
-        <p className="text-slate-600 max-w-4xl mb-6">
-          Our products improve financial accessibility with innovative, user‑friendly solutions for businesses and consumers.
+        <h2 className="text-2xl md:text-3xl font-extrabold tracking-wider text-[#0a132e] mb-1">MANAGEMENT CONSULTING</h2>
+        <p className="text-[#0a132e]/80 max-w-4xl mb-6">
+          Our products improve financial accessibility with innovative, user-friendly solutions for businesses and consumers.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left decorative card (matching Services style) */}
@@ -26,8 +26,8 @@ const ManagementConsulting = () => {
               <div className="mx-auto mb-3 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#477CFF]/15 text-[#477CFF]">
                 <FiShield className="w-6 h-6" />
               </div>
-              <div className="font-semibold text-slate-900">Management Consulting</div>
-              <div className="text-xs text-slate-600 mt-1">Strategy, risk, and technology execution designed to move your organization forward.</div>
+              <div className="font-semibold text-[#0a132e]">Management Consulting</div>
+              <div className="text-xs text-[#0a132e]/70 mt-1">Strategy, risk, and technology execution designed to move your organization forward.</div>
             </div>
           </div>
 

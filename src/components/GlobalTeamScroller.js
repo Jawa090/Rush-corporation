@@ -5,7 +5,7 @@ const TEAM = [
   { id: 'mazam', name: 'Muhammad Azam', role: 'Executive Director', photo: '/MuhammadAzam.png', linkedin: '#', website: '#' },
   { id: 'aakhan', name: 'Aamir A. Khan', role: 'Head of BD, Central & West US', photo: '/AamirKhan.png', linkedin: '#', website: '#' },
   { id: 'dhassan', name: 'Daniyal Hassan', role: 'PMO Head', photo: '/DaniyalHassan.png', linkedin: '#', website: '#' },
-  { id: 'wtariq', name: 'Waqas Tariq', role: 'CTO', photo: '/WaqasTariq.png', linkedin: '#', website: '#' },
+  { id: 'wtariq', name: 'Waqas Tariq', role: 'CTO', photo: '/waqas.jpg', linkedin: '#', website: '#' },
   { id: 'asaigal', name: 'Asif Saigal', role: 'CPO', photo: '/AsifSaigal.png', linkedin: '#', website: '#' },
   { id: 'rsidebottom', name: 'Richard Sidebottom', role: 'Senior Solution Architect', photo: '/RichardSidebottom.png', linkedin: '#', website: '#' },
   { id: 'ohampton', name: 'Orlando Hampton', role: 'AI Solution Architect', photo: '/OrlandoHampton.png', linkedin: '#', website: '#' },
@@ -17,31 +17,80 @@ const TEAM = [
   { id: 'mmalik', name: 'Mudassar Malik', role: 'Technical Architect', photo: '/MudassarMalik.png', linkedin: '#', website: '#' },
   { id: 'tahmad', name: 'Tanveer Ahmad', role: 'Senior Tech Risk Advisor', photo: '/TanveerAhmad.png', linkedin: '#', website: '#' },
   { id: 'ichaudhry', name: 'Imran Chaudhry', role: 'Senior Tech Advisor', photo: '/ImranChaudhry.png', linkedin: '#', website: '#' },
-  { id: 'mzahar', name: 'Mudassar Zahar', role: 'BDM, North America', photo: '/MudassarZahar.png', linkedin: '#', website: '#' },
-  { id: 'ajamil', name: 'Aqsa Jamil', role: 'BDM, MENA', photo: '/AqsaJamil.png', linkedin: '#', website: '#' },
-  { id: 'shina', name: 'Syeda Hina', role: 'HR Manager', photo: '/SyedaHina.png', linkedin: '#', website: '#' },
+  { id: 'mzahar', name: 'Mudassar Zafar', role: 'BDM, North America', photo: '/mudasar.jpg', linkedin: '#', website: '#' },
+  { id: 'waleed', name: 'Waleed Ahmad', role: '—', photo: '/waleed.jpg', linkedin: '#', website: '#' },
+  { id: 'fiqbal', name: 'Faisal Iqbal', role: '—', photo: '/faisal.jpg', linkedin: '#', website: '#' },
+  { id: 'hafiz', name: 'Hafiz Anees', role: '—', photo: '/anees.jpg', linkedin: '#', website: '#' },
+  { id: 'ajamil', name: 'Aqsa Jamil', role: 'BDM, MENA', photo: '/aqsa.jpg', linkedin: '#', website: '#' },
+  { id: 'shina', name: 'Bushra A.', role: 'HR Manager', photo: '/bushra.jpg', linkedin: '#', website: '#' },
   // Existing project images
   { id: 'hs', name: 'Hassan Sakif', role: 'Product Manager', photo: '/hassan.png', linkedin: '#', website: '#' },
   { id: 'ry', name: 'Rayan CH', role: 'Marketing Head', photo: '/Rayan.png', linkedin: '#', website: '#' },
 ];
 
+// Categorized sections built from the spreadsheet provided
+const TEAM_SECTIONS = [
+  {
+    id: 'management',
+    title: 'Global Management Team',
+    members: [
+      { ref: 'hs', name: 'Hassan Sakif', role: 'Product Manager', available: true },
+      { ref: 'ry', name: 'Muhammad Raiyan', role: 'Marketing Head', available: true },
+      { ref: 'mazam', name: 'Muhammad Azam', role: 'Executive Director', available: true },
+      { ref: 'aakhan', name: 'Aamir A. Khan', role: 'Head of BD, Central & West US', available: false },
+      { ref: 'wtariq', name: 'Waqas Tariq', role: 'CTO', available: true },
+      { ref: 'asaigal', name: 'Asif Saigal', role: 'CPO', available: true },
+      { ref: 'skhan', name: 'Sarfaraz Khan', role: 'Solution Architect', available: true },
+      { ref: 'kwaheed', name: 'Kamran Waheed', role: 'Solution Architect', available: true },
+      { ref: 'wmajid', name: 'Waqas Majid', role: 'BDM, West Europe', available: true },
+      { ref: 'waleed', name: 'Waleed Ahmad', role: '—', available: true },
+      { ref: 'mzahar', name: 'Mudassar Zafar', role: 'BDM, North America', available: true },
+      { ref: 'ajamil', name: 'Aqsa Jamil', role: 'BDM, MENA', available: true },
+      { ref: 'shina', name: 'Bushra A.', role: 'HR Manager', available: true },
+      { ref: 'fiqbal', name: 'Faisal Iqbal', role: 'Digital Marketing Head', available: true },
+      { ref: 'hafiz', name: 'Hafiz Anees', role: 'Legal Advisor', available: true },
+    ]
+  },
+  {
+    id: 'advisory',
+    title: 'Advisory Board',
+    members: [
+      { ref: 'ichaudhry', name: 'Imran Chaudhry', role: 'Senior Tech Advisor', available: true },
+      { ref: 'tahmad', name: 'Tanveer Ahmad', role: 'Senior Tech Risk Advisor', available: true },
+      { ref: 'mmalik', name: 'Mudassar Malik', role: 'Technical Architect', available: true },
+      { ref: 'dhassan', name: 'Daniyal Hassan', role: 'PMO Head', available: true },
+      { ref: 'mmumreez', name: 'Mumreez Khan', role: 'BDM North Europe', available: true },
+    ]
+  }
+];
+
 function MemberCard({ member }){
   return (
-    <div className="shrink-0 w-64 md:w-72 mr-5 md:mr-7 rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.04] hover:border-white/20 shadow-xl">
-      <div className="h-36 w-36 mx-auto rounded-full overflow-hidden bg-[#0a132e] border border-white/10 relative shadow-2xl">
-        <img
+    <div className="group shrink-0 w-64 md:w-72 mr-5 md:mr-7 rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.04] hover:border-white/20 shadow-xl">
+      <div className="relative h-36 w-36 mx-auto">
+        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 blur-[12px] opacity-30"></div>
+        <div className="relative h-full w-full rounded-full p-[3px] bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-500">
+          <div className="h-full w-full rounded-full overflow-hidden bg-[#0a132e] border border-white/10 relative shadow-2xl">
+            <img
           src={member.photo}
           alt={member.name}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
           onError={(e)=>{ e.currentTarget.style.display='none'; const f=e.currentTarget.parentElement?.querySelector('.fallback'); if(f){f.style.display='grid';} }}
         />
         <div className="fallback hidden absolute inset-0 place-items-center text-white/80 text-xl font-bold">
           {member.name.split(' ').map(w=>w[0]).slice(0,2).join('')}
         </div>
+        {!member.available && (
+          <div className="absolute inset-0 grid place-items-center bg-black/50 text-white text-xs font-semibold">
+            Not Available
+          </div>
+        )}
+          </div>
+        </div>
       </div>
       <div className="mt-4 text-center">
-        <div className="text-white font-semibold text-base md:text-lg">{member.name}</div>
-        <div className="text-white/70 text-sm md:text-base">{member.role}</div>
+        <div className="text-white font-semibold text-base md:text-lg opacity-100">{member.name}</div>
+        <div className="inline-block mt-1 px-2 py-0.5 rounded-full text-xs text-white/80 bg-white/10 border border-white/10">{member.role}</div>
       </div>
       <div className="mt-3 flex justify-center gap-3">
         {(member.linkedin || member.website) && (
@@ -63,20 +112,31 @@ function MemberCard({ member }){
   );
 }
 
-const GlobalTeamScroller = ({ members = TEAM, speedSeconds = 28, gap = 16 }) => {
-  const items = [...members, ...members];
-  return (
-    <section className="relative max-w-7xl mx-auto px-6 mt-16" id="team">
-      <div className="pointer-events-none absolute -z-10 inset-0 overflow-hidden">
-        <div className="absolute -top-24 -left-10 h-56 w-56 md:h-80 md:w-80 rounded-full bg-blue-500/20 blur-3xl"></div>
-        <div className="absolute -bottom-28 -right-10 h-60 w-60 md:h-96 md:w-96 rounded-full bg-purple-500/20 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/3 -translate-y-1/2 h-40 w-40 md:h-56 md:w-56 rounded-full bg-cyan-500/10 blur-3xl"></div>
-      </div>
-      <div className="text-center mb-8">
-        <h3 className="text-2xl md:text-3xl font-display text-white">Our Global Team</h3>
-        <p className="text-white/70 mt-2">A snapshot of the brilliant people building Rush worldwide.</p>
-      </div>
+const GlobalTeamScroller = ({ members, sections = TEAM_SECTIONS, speedSeconds = 28, gap = 16 }) => {
+  // Helper to resolve members from refs and merge base data
+  const resolveMember = (refIdOrMember) => {
+    if (typeof refIdOrMember === 'object' && refIdOrMember.id) return refIdOrMember;
+    const base = TEAM.find(t => t.id === refIdOrMember.ref);
+    if (!base) {
+      return {
+        id: refIdOrMember.ref,
+        name: refIdOrMember.name,
+        role: refIdOrMember.role || '',
+        photo: '/R.png',
+        available: refIdOrMember.available !== false,
+      };
+    }
+    return {
+      ...base,
+      name: refIdOrMember.name || base.name,
+      role: refIdOrMember.role || base.role,
+      available: refIdOrMember.available !== false,
+    };
+  };
 
+  const renderScroller = (list) => {
+    const items = [...list, ...list];
+    return (
       <div className="relative">
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#0a132e] to-transparent"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#0a132e] to-transparent"></div>
@@ -89,6 +149,41 @@ const GlobalTeamScroller = ({ members = TEAM, speedSeconds = 28, gap = 16 }) => 
           </div>
         </div>
       </div>
+    );
+  };
+
+  return (
+    <section className="relative max-w-7xl mx-auto px-6 mt-16" id="team">
+      <div className="pointer-events-none absolute -z-10 inset-0 overflow-hidden">
+        <div className="absolute -top-24 -left-10 h-56 w-56 md:h-80 md:w-80 rounded-full bg-blue-500/20 blur-3xl"></div>
+        <div className="absolute -bottom-28 -right-10 h-60 w-60 md:h-96 md:w-96 rounded-full bg-purple-500/20 blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 -translate-y-1/2 h-40 w-40 md:h-56 md:w-56 rounded-full bg-cyan-500/10 blur-3xl"></div>
+      </div>
+      <div className="text-center mb-8">
+        <h3 className="text-2xl md:text-3xl font-display bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">Our Global Team</h3>
+        <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+        <p className="text-white/70 mt-3">A snapshot of the brilliant people building Rush worldwide.</p>
+      </div>
+
+      {Array.isArray(members) && members.length > 0 && (
+        <div className="mt-6">
+          {renderScroller(members)}
+        </div>
+      )}
+
+      {!members && sections.map(section => {
+        const list = section.members
+          .map(resolveMember)
+          .map(m => ({ ...m, opacity: m.available ? 1 : 0.8 }));
+        return (
+          <div key={section.id} className="mt-12">
+            <div className="text-center mb-4">
+              <h4 className="text-xl md:text-2xl text-white font-semibold">{section.title}</h4>
+            </div>
+            {renderScroller(list)}
+          </div>
+        );
+      })}
 
       <style jsx>{`
         @keyframes marquee {

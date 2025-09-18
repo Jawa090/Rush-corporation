@@ -39,9 +39,9 @@ const brands = [
   },
   { 
     key: 'contractorlist', 
-    name: 'Contractor List', 
+    name: 'Contractors List', 
     logo: 'logo6.png', 
-    about: 'Contractor List is a worldwide platform revolutionizing how businesses find and hire skilled contractors. With verified professionals across 100+ categories, we make it effortless to browse, connect with, and hire top talent. Our secure payment system and rating platform ensure quality results every time.',
+    about: 'Contractors List is a worldwide platform revolutionizing how businesses find and hire skilled contractors. With verified professionals across 100+ categories, we make it effortless to browse, connect with, and hire top talent. Our secure payment system and rating platform ensure quality results every time.',
     tagline: 'Global Contractor Network',
     bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-600/20'
   },
@@ -56,7 +56,7 @@ const brands = [
   },
   { 
     key: 'estimatinghub', 
-    name: 'EstimatingHub', 
+    name: 'Estimating Hub', 
     logo: 'logo3.png', 
     about: 'EstimatingHub is a collaborative platform that centralizes estimates, data, and approvals for teams of all sizes. Our intuitive dashboard provides real-time insights, version control, and seamless collaboration features that streamline the estimation process from concept to completion.',
     tagline: 'Centralized Estimation Platform',
@@ -65,7 +65,7 @@ const brands = [
   },
   { 
     key: 'decxperts', 
-    name: 'Decxperts', 
+    name: 'DEC Experts', 
     logo: 'logo4.png', 
     about: 'Decxperts is a premier contractor services platform providing expert-led delivery and integration services. We connect organizations with vetted professionals across various industries, ensuring projects are completed with confidence and excellence. Our rigorous screening process guarantees top-tier talent for every project.',
     tagline: 'Expert Contractor Services',
