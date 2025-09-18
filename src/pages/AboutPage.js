@@ -382,7 +382,7 @@ const AboutPage = () => {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h3 className="text-2xl md:text-3xl font-display text-[#0a132e]">Want to build with us?</h3>
           <p className="mt-4 text-[#0a132e]/80 leading-7">We're always looking for curious minds who love craft and impact.</p>
-          <a href="#/contact" className="mt-6 inline-flex px-5 py-2.5 rounded-md bg-[#0a132e] text-white font-semibold hover:bg-[#0b1740]">Join Rush</a>
+          <Link to="/contact" className="mt-6 inline-flex px-5 py-2.5 rounded-md bg-[#0a132e] text-white font-semibold hover:bg-[#0b1740]">Join Rush</Link>
         </div>
       </section>
 

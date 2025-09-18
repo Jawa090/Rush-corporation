@@ -198,6 +198,18 @@ const HeroSlider = () => {
           </div>
         </div>
       </div>
+
+      {/* Intro text moved below stats */}
+      <section className="relative z-10 text-center pt-6 pb-4 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-display text-slate-900 mb-3 leading-snug tracking-normal rise-1">
+            Tech Solutions for the Global Tech Industry
+          </h1>
+          <p className="text-lg md:text-xl text-slate-700 leading-normal max-w-4xl mx-auto font-body rise-2">
+            We bring people together through technology and innovation, creating platforms that connect industries and power user experiences.
+          </p>
+        </div>
+      </section>
     </main>
   );
 };
