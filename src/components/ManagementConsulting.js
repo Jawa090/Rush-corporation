@@ -20,14 +20,16 @@ const ManagementConsulting = () => {
           Our products improve financial accessibility with innovative, user-friendly solutions for businesses and consumers.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left decorative card (matching Services style) */}
+          {/* Left image */}
           <div className="relative hidden md:flex items-center justify-center">
-            <div className="rounded-2xl bg-white shadow-xl p-6 text-center max-w-sm">
-              <div className="mx-auto mb-3 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#477CFF]/15 text-[#477CFF]">
-                <FiShield className="w-6 h-6" />
+            <div className="w-full max-w-sm">
+              <div className="rounded-2xl overflow-hidden">
+                <img
+                  src="/management.jpg"
+                  alt="Management Consulting"
+                  className="w-full h-auto object-cover"
+                />
               </div>
-              <div className="font-semibold text-[#0a132e]">Management Consulting</div>
-              <div className="text-xs text-[#0a132e]/70 mt-1">Strategy, risk, and technology execution designed to move your organization forward.</div>
             </div>
           </div>
 
