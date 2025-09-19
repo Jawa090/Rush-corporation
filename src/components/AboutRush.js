@@ -25,7 +25,7 @@ const AboutRush = () => {
               </Link>
             </div>
             <div className="relative py-3 md:py-6 flex justify-center md:justify-end">
-              <img src="/pic1.jpg" alt="Rush offices" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-xl" />
+              <img src="/company.png" alt="Rush offices" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-xl" />
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@ const AboutRush = () => {
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             <div className="relative py-2 md:py-4 flex justify-center md:justify-start">
-              <img src="/pic2.png" alt="Rush people" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
+              <img src="/people.png" alt="Rush people" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-display text-[#0a132e] mb-2">Our people</h2>
@@ -83,7 +83,7 @@ const AboutRush = () => {
 
             {/* Image on the right */}
             <div className="relative py-2 md:py-4 flex justify-center md:justify-end">
-              <img src="/pic3.jpg" alt="Rush brands" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
+              <img src="/brands.png" alt="Rush brands" className="w-[92%] sm:w-[85%] md:w-[70%] h-auto shadow-lg" />
             </div>
           </div>
         </div>

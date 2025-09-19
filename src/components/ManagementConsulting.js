@@ -25,7 +25,7 @@ const ManagementConsulting = () => {
             <div className="w-full max-w-sm">
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src="/management.jpg"
+                  src="/management.png"
                   alt="Management Consulting"
                   className="w-full h-auto object-cover"
                 />
