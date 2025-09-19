@@ -98,20 +98,47 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="max-w-7xl mx-auto px-6 mt-8">
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-white font-semibold text-xl font-sans">Craft and clarity</h3>
-            <p className="text-white/70 mt-2 leading-relaxed font-sans">We sweat the details and reduce complexity so products feel natural and intuitive.</p>
+      {/* Our Values */}
+      <section className="max-w-7xl mx-auto px-6 mt-10">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-display text-white">
+            <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">Our Values</span>
+          </h2>
+          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" />
+          <p className="text-white/70 mt-3 max-w-3xl mx-auto">Simple principles that keep us focused on quality and impact.</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="rounded-xl border border-white/10 bg-white/[0.06] p-6 hover:bg-white/[0.09] hover:border-white/20 transition-all duration-300 hover:translate-y-0.5">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/25 to-cyan-500/25 border border-white/10 grid place-items-center text-blue-200">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6l-8 5-8-5"/><path d="M4 6v12l8 5 8-5V6"/></svg>
+            </div>
+            <h3 className="text-white font-semibold text-lg mt-4">Craft & Clarity</h3>
+            <p className="text-white/70 mt-2 leading-relaxed">Reduce complexity. Polish details. Make products feel effortless.</p>
           </div>
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-white font-semibold text-xl font-sans">Speed with purpose</h3>
-            <p className="text-white/70 mt-2 leading-relaxed font-sans">We move quickly and ship thoughtfully, guided by outcomes that matter to users.</p>
+
+          <div className="rounded-xl border border-white/10 bg-white/[0.06] p-6 hover:bg-white/[0.09] hover:border-white/20 transition-all duration-300 hover:translate-y-0.5">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/25 to-pink-500/25 border border-white/10 grid place-items-center text-purple-200">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12h13"/><path d="M13 5l7 7-7 7"/></svg>
+            </div>
+            <h3 className="text-white font-semibold text-lg mt-4">Speed with Purpose</h3>
+            <p className="text-white/70 mt-2 leading-relaxed">Ship in small steps. Measure outcomes. Learn and improve.</p>
           </div>
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-white font-semibold text-xl font-sans">Together, better</h3>
-            <p className="text-white/70 mt-2 leading-relaxed font-sans">We collaborate across disciplines and brands, sharing systems and learnings.</p>
+
+          <div className="rounded-xl border border-white/10 bg-white/[0.06] p-6 hover:bg-white/[0.09] hover:border-white/20 transition-all duration-300 hover:translate-y-0.5">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500/25 to-violet-500/25 border border-white/10 grid place-items-center text-pink-200">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+            </div>
+            <h3 className="text-white font-semibold text-lg mt-4">Together, Better</h3>
+            <p className="text-white/70 mt-2 leading-relaxed">Share systems. Collaborate openly. Celebrate wins as one team.</p>
+          </div>
+
+          <div className="rounded-xl border border-white/10 bg-white/[0.06] p-6 hover:bg-white/[0.09] hover:border-white/20 transition-all duration-300 hover:translate-y-0.5">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/25 to-blue-500/25 border border-white/10 grid place-items-center text-cyan-200">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.24 12.24l-8.49 8.49a2 2 0 01-2.83 0L3.76 15.57a2 2 0 010-2.83l8.49-8.49a2 2 0 012.83 0l5.16 5.16a2 2 0 010 2.83z"/><path d="M7.5 10.5l6 6"/></svg>
+            </div>
+            <h3 className="text-white font-semibold text-lg mt-4">Reliability First</h3>
+            <p className="text-white/70 mt-2 leading-relaxed">Accessibility, performance, and security are built‑in from day one.</p>
           </div>
         </div>
       </section>
@@ -145,7 +172,7 @@ const AboutPage = () => {
                       <div className="h-full w-full rounded-full overflow-hidden bg-[#0a132e] relative">
                         <img
                           src="/usman.png"
-                          alt="Usman CHAUDHARY"
+                          alt="Usman Chaudhary"
                           className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
@@ -158,7 +185,7 @@ const AboutPage = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-blue-300 transition-colors duration-300">Usman CHAUDHARY</h3>
+                    <h3 className="text-white font-bold text-2xl mb-1 group-hover:text-blue-300 transition-colors duration-300">Usman Chaudhary</h3>
                     <p className="text-blue-400 text-lg font-medium">Co-Founder & CEO</p>
                     <div className="flex gap-2 mt-2">
                       <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-medium border border-blue-500/30">
@@ -263,7 +290,7 @@ const AboutPage = () => {
             <div className="flex justify-center gap-8 text-sm text-white/70">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                <span>Usman CH, CEO & Co-Founder</span>
+                <span>Usman Chaudhary, CEO & Co-Founder</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-purple-400"></div>
