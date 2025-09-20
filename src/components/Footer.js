@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-white/10 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-white/60">© {new Date().getFullYear()} Rush Group International Limited. All rights reserved.</p>
-          <div className="text-white/60">Made with ❤️ by Rush</div>
+          <a href="https://bitwords.com/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white/80 transition-colors">Made with ❤ by Bitwords Inc</a>
         </div>
       </div>
     </footer>

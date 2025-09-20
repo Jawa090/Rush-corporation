@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import GlobalTeamScroller from '../components/GlobalTeamScroller';
 
 const teammates = [
-  { id: 1, name: 'Usman CHAUDHARY', role: 'Founder & CEO', initials: 'U', photo: '/usman.png', linkedin: '' },
-  { id: 2, name: 'Hafiz Saqif', role: 'Founder & CEO', initials: 'H', photo: '/hafiz.jpg', linkedin: '' },
+  { id: 1, name: 'Usman Chaudhary', role: 'Co-Founder & CEO', initials: 'U', photo: '/usman.png', linkedin: '' },
+  { id: 2, name: 'Hafiz Saqif', role: 'Co-Founder & CEO', initials: 'H', photo: '/hafiz.jpg', linkedin: '' },
 ];
 
 const AboutPage = () => {
@@ -231,7 +231,7 @@ const AboutPage = () => {
                         <img
                           src="/hafiz.jpg"
                           alt="Hafiz Saqif"
-                          className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500"
+                          className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500 filter grayscale"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
                             const fallback = e.currentTarget.parentElement && e.currentTarget.parentElement.querySelector('.fallback');
@@ -330,7 +330,7 @@ const AboutPage = () => {
                       <img
                         src={t.photo}
                         alt={t.name}
-                        className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500"
+                        className="h-full w-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-500 filter grayscale"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                           const fallback = e.currentTarget.parentElement && e.currentTarget.parentElement.querySelector('.fallback');

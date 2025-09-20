@@ -4,16 +4,16 @@ const TEAM = [
   // From provided images: global team members (excluding executives)
   { id: 'mazam', name: 'Muhammad Azam', role: 'Executive Director', photo: '/azam.png', linkedin: '#', website: '#' },
   { id: 'aakhan', name: 'Aamir A. Khan', role: 'Head of BD, Central & West US', photo: '/AamirKhan.png', linkedin: '#', website: '#' },
-  { id: 'dhassan', name: 'Daniyal Hassan', role: 'PMO Head', photo: '/DaniyalHassan.png', linkedin: '#', website: '#' },
+  { id: 'dhassan', name: 'Daniyal Hassan', role: 'PMO Head', photo: '/daniyal.png', linkedin: '#', website: '#' },
   { id: 'wtariq', name: 'Waqas Tariq', role: 'CTO', photo: '/waqas.png', linkedin: '#', website: '#' },
-  { id: 'asaigal', name: 'Asif Saigal', role: 'CPO', photo: '/AsifSaigal.png', linkedin: '#', website: '#' },
+  { id: 'asaigal', name: 'Asif Saigal', role: 'CPO', photo: '/asif.png', linkedin: '#', website: '#' },
   { id: 'rsidebottom', name: 'Richard Sidebottom', role: 'Senior Solution Architect', photo: '/richard.png', linkedin: '#', website: '#' },
   { id: 'ohampton', name: 'Orlando Hampton', role: 'AI Solution Architect', photo: '/orlando.png', linkedin: '#', website: '#' },
   { id: 'ehaberland', name: 'Eric Haberland', role: 'Solution Architect', photo: '/eric.png', linkedin: '#', website: '#' },
   { id: 'skhan', name: 'Sarfaraz Khan', role: 'Solution Architect', photo: '/sarfraz.png', linkedin: '#', website: '#' },
   { id: 'kwaheed', name: 'Kamran Waheed', role: 'Solution Architect', photo: '/kamran.png', linkedin: '#', website: '#' },
   { id: 'wmajid', name: 'Waqas Majid', role: 'BDM, West Europe', photo: '/WaqasMajid.png', linkedin: '#', website: '#' },
-  { id: 'mmumreez', name: 'M. Mumreez', role: 'BDM North Europe', photo: '/mumreez.png', linkedin: '#', website: '#' },
+  { id: 'mmumreez', name: 'M. Mumreez', role: 'BDM North Europe', photo: '/mumreez.jpg', linkedin: '#', website: '#' },
   { id: 'mmalik', name: 'Mudassar Malik', role: 'Technical Architect', photo: '/MudassarMalik.png', linkedin: '#', website: '#' },
   { id: 'tahmad', name: 'Tanveer Ahmad', role: 'Senior Tech Risk Advisor', photo: '/tanveer.png', linkedin: '#', website: '#' },
   { id: 'ichaudhry', name: 'Imran Chaudhry', role: 'Senior Tech Advisor', photo: '/imran.png', linkedin: '#', website: '#' },
@@ -74,7 +74,7 @@ function MemberCard({ member }){
             <img
           src={member.photo}
           alt={member.name}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110 filter grayscale"
           onError={(e)=>{ e.currentTarget.style.display='none'; const f=e.currentTarget.parentElement?.querySelector('.fallback'); if(f){f.style.display='grid';} }}
         />
         <div className="fallback hidden absolute inset-0 place-items-center text-white/80 text-xl font-bold">
