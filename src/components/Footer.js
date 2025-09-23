@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Icon = ({ title, children }) => (
   <svg
@@ -26,10 +27,10 @@ const Footer = () => {
               <img src="/logo1.png" alt="Rush Group" className="h-7 w-auto drop-shadow" />
             </div>
             <nav className="flex items-center gap-6 flex-wrap">
-              <a href="#" className="hover:text-white transition-colors">Careers</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+              <Link to="/careers" className="hover:text-white transition-colors">Careers</Link>
+              <Link to="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
+              <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
             </nav>
           </div>
 

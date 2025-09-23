@@ -14,6 +14,10 @@ import AboutPage from './pages/AboutPage';
 import GroupBrandsPage from './pages/GroupBrandsPage';
 import ContactPage from './pages/ContactPage';
 import InvestorCenterPage from './pages/InvestorCenterPage';
+import CareersPage from './pages/CareersPage';
+import CookiePolicyPage from './pages/CookiePolicyPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsConditionsPage from './pages/TermsConditionsPage';
 
 function App() {
 
@@ -26,6 +30,10 @@ function App() {
         <Route path="/brands" element={<GroupBrandsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/investors" element={<InvestorCenterPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms" element={<TermsConditionsPage />} />
       </Routes>
     </Router>
   );
