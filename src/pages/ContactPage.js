@@ -335,9 +335,9 @@ const ContactPage = () => {
                   HQ
                 </h3>
                 <address className="not-italic text-white/80 leading-6 text-sm">
-                  5900 Balcones Drive, STE 100<br />
-                  Austin, TX 78731<br />
-                  USA
+                898 Bay Ridge Avenue<br />
+                  Brooklyn, NY 11220<br />
+                  
                 </address>
               </div>
             </div>
