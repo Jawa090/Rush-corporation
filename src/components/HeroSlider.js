@@ -67,12 +67,18 @@ const HeroSlider = () => {
             {/* Left: image carousel */}
             <div className="order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden w-full sm:max-w-2xl aspect-video border border-slate-300 shadow-xl mx-auto lg:mx-0">
+                <style>{`
+                  @keyframes kenburns {
+                    0% { transform: scale(1.02); }
+                    100% { transform: scale(1.08); }
+                  }
+                `}</style>
                 {slides.map((s, idx) => (
                   <img
                     key={s.id}
                     src={s.image}
                     alt="Slide visual"
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === current ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-cover will-change-transform will-change-opacity transition-all duration-700 ease-out ${idx === current ? 'opacity-100 animate-[kenburns_6s_linear_forwards]' : 'opacity-0'}`}
                   />
                 ))}
 
